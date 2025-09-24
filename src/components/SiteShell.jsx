@@ -3,12 +3,10 @@
 import { Box, Container, Stack, Paper } from "@mui/material";
 import Sidebar from "@/components/Sidebar";
 import TopNav from "@/components/TopNav";
-import CursorFX from "@/components/CursorFX";
 
 export default function SiteShell({ children }) {
   return (
     <Container maxWidth="xl" sx={{ py: { xs: 2, md: 4 } }}>
-      <CursorFX />
       <Box sx={{
         display: 'grid',
         gridTemplateColumns: { xs: '1fr', md: '320px 1fr' },
