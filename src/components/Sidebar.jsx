@@ -78,7 +78,7 @@ export default function Sidebar() {
           <ListItemIcon>
             <EmailIcon />
           </ListItemIcon>
-          <ListItemText primary="hello@vancreative.dev" secondary="Email" />
+          <ListItemText primary="hello@vancreative.com" secondary="Email" />
         </ListItem>
         <ListItem dense>
           <ListItemIcon>
