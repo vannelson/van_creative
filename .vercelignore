@@ -1,0 +1,11 @@
+out/
+.next/
+node_modules/
+*.zip
+out-*/
+*.tar
+*.tar.gz
+*.log
+coverage/
+.DS_Store
+Thumbs.db
