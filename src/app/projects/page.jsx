@@ -110,7 +110,7 @@ export default function ProjectsPage() {
                 <CardMedia component="img" image={p.images[0]} alt={p.title} sx={{ width: 310, aspectRatio: '16 / 9', height: 'auto', objectFit: 'cover' }} />
                 <Box sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.0))', opacity: 0, transition: 'opacity .2s ease', pointerEvents: 'none', '.MuiCardActionArea-root:hover &': { opacity: 1 } }} />
                 <Chip label={`${p.images.length} images`} size="small" sx={{ position: 'absolute', left: 8, bottom: 8, bgcolor: 'rgba(15,17,19,0.7)', color: 'white', borderColor: 'rgba(255,255,255,0.25)', height: 22, '& .MuiChip-label': { px: 0.75, fontSize: 11 } }} variant="outlined" />
-                <IconButton aria-label="Zoom" sx={{ position: 'absolute', right: 8, bottom: 8, bgcolor: 'rgba(0,0,0,0.5)', color: 'white', opacity: 0, transition: 'opacity .2s ease', '.MuiCardActionArea-root:hover &': { opacity: 1 } }}>
+                <IconButton component="span" aria-hidden sx={{ position: 'absolute', right: 8, bottom: 8, bgcolor: 'rgba(0,0,0,0.5)', color: 'white', opacity: 0, transition: 'opacity .2s ease', '.MuiCardActionArea-root:hover &': { opacity: 1 } }}>
                   <ZoomInIcon fontSize="small" />
                 </IconButton>
               </Box>
@@ -136,7 +136,7 @@ export default function ProjectsPage() {
 
       <Dialog open={open} onClose={handleClose} maxWidth="md" fullWidth>
         <DialogTitle sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <Typography variant="h6" fontWeight={800}>{active?.title}</Typography>
+          <Typography component="span" variant="h6" fontWeight={800}>{active?.title}</Typography>
           <IconButton onClick={handleClose} aria-label="Close"><CloseIcon /></IconButton>
         </DialogTitle>
         <DialogContent dividers>
