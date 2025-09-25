@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Box, Card, CardContent, Chip, Stack, Typography } from "@mui/material";
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 import TimelineIcon from "@mui/icons-material/Timeline";
 import siteData from "@/data/siteData.json";
@@ -30,7 +31,7 @@ export default function ExperiencePage() {
       <Card sx={{ border: "1px solid", borderColor: "divider", backgroundImage: "none" }}>
         <CardContent>
           <Box sx={{ position: "relative" }}>
-            <Box sx={{ position: "absolute", left: 13, top: 0, bottom: 0, width: 2, bgcolor: "divider" }} />
+            <Box sx={{ position: "absolute", left: 13, top: 0, bottom: 0, width: 3, bgcolor: "transparent", background: "linear-gradient(to bottom, rgba(34,197,94,0.3), rgba(34,197,94,0))" }} />
             <Stack spacing={3}>
               {experiences.map((e, i) => (
                 <Box key={e.company} sx={{ display: "grid", gridTemplateColumns: "26px 1fr", columnGap: 2 }}>
@@ -39,20 +40,21 @@ export default function ExperiencePage() {
                       sx={{
                         position: "absolute",
                         top: 6,
-                        left: -14,
-                        width: 26,
-                        height: 26,
+                        left: -15,
+                        width: 28,
+                        height: 28,
                         borderRadius: 999,
                         bgcolor: "background.paper",
-                        border: "1px solid",
-                        borderColor: "divider",
+                        border: "2px solid",
+                        borderColor: "rgba(34,197,94,0.5)",
+                        boxShadow: "0 4px 18px rgba(34,197,94,0.2)",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
                         zIndex: 1,
                       }}
                     >
-                      <Box sx={{ width: 26, height: 26, borderRadius: 999, bgcolor: "primary.main", color: "primary.contrastText", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800 }}>
+                      <Box sx={{ width: 24, height: 24, borderRadius: 999, bgcolor: "primary.main", color: "primary.contrastText", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800 }}>
                         {i + 1}
                       </Box>
                     </Box>
@@ -79,22 +81,22 @@ export default function ExperiencePage() {
                             <Box component="img" src={e.logo} alt={e.company} sx={{ width: 80, height: 48, objectFit: "cover", borderRadius: 1, border: "1px solid", borderColor: "divider", bgcolor: "#0f1113" }} />
                             <Box>
                               <Typography variant="h6" fontWeight={800}>{e.company}</Typography>
-                              <Typography color="text.secondary">{e.role}</Typography>
+                              <Typography color="text.secondary" sx={{ fontWeight: 600 }}>{e.role}</Typography>
                             </Box>
                           </Stack>
                           <Chip icon={<TimelineIcon fontSize="small" />} label={e.period} color="primary" variant="filled" size="small" sx={{ fontWeight: 700 }} />
                         </Stack>
 
-                        <Typography color="text.secondary">{e.summary}</Typography>
+                        <Typography color="text.secondary" sx={{ lineHeight: 1.7 }}>{e.summary}</Typography>
 
-                        <Box>
+                        <Stack spacing={0.75} sx={{ mt: 0.5 }}>
                           {e.highlights.map((h, idx) => (
-                            <Stack key={idx} direction="row" spacing={1.25} alignItems="flex-start" sx={{ mb: 0.5 }}>
-                              <Box sx={{ mt: "6px", width: 8, height: 8, borderRadius: 999, bgcolor: "primary.main" }} />
-                              <Typography>{h}</Typography>
+                            <Stack key={idx} direction="row" spacing={1} alignItems="flex-start">
+                              <CheckCircleOutlineIcon color="primary" sx={{ fontSize: 18, mt: "2px" }} />
+                              <Typography variant="body2" color="text.secondary">{h}</Typography>
                             </Stack>
                           ))}
-                        </Box>
+                        </Stack>
 
                         <Stack direction="row" spacing={1} flexWrap="wrap">
                           {e.tags.map((t) => (
@@ -113,4 +115,3 @@ export default function ExperiencePage() {
     </Stack>
   );
 }
-

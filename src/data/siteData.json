@@ -20,6 +20,7 @@
     { "href": "/about", "label": "About", "icon": "Info" },
     { "href": "/experience", "label": "Experience", "icon": "Description" },
     { "href": "/projects", "label": "Projects", "icon": "Work" },
+    { "href": "/skills", "label": "Skills", "icon": "Code" },
     { "href": "/contact", "label": "Contact", "icon": "ContactMail" }
   ],
   "services": [
@@ -51,13 +52,13 @@
       "icon": "BugReport",
       "title": "Testing / QA",
       "desc": "Unit, E2E, performance checks",
-      "tags": ["Jest", "Playwright", "Cypress", "Postman", "swagger"]
+      "tags": ["Playwright", "Cypress", "Postman"]
     },
     {
       "icon": "CloudDone",
       "title": "GitHub & Azure CI/CD",
       "desc": "Pipelines, Actions, releases",
-      "tags": ["GitHub Actions", "Azure DevOps", "Pipelines"]
+      "tags": ["CICD", "Azure DevOps", "Pipelines"]
     }
   ],
   "projects": [
@@ -79,7 +80,6 @@
       "url": "#",
       "tags": ["Vue", "Node.js", "Firebase"]
     },
-
     {
       "id": "Scanda",
       "title": "Scandinavian Good Business AB",
@@ -101,45 +101,109 @@
   ],
   "experiences": [
     {
-      "company": "Envireau Pacific Incorporated",
-      "role": "Fullstack Developer",
-      "period": "2023 – Present",
-      "logo": "/company1.png",
-      "summary": "Leading product initiatives across web apps with a focus on performance, DX, and delightful UI.",
-      "highlights": [
-        "Created Accounting Collection System using Vue and Laravel; tracked client accounts and payable aging.",
-        "Scaled APIs and caching for 10x traffic",
-        "Mentored devs; improved DX and CI/CD"
-      ],
-      "tags": ["Next.js", "Node.js", "PostgreSQL", "CI/CD"]
-    },
-    {
-      "company": "Tech Studio",
-      "role": "Frontend Engineer",
-      "period": "2020 – 2023",
-      "logo": "/company2.png",
-      "summary": "Built component libraries and modern UIs, collaborating with design to raise quality bars.",
-      "highlights": [
-        "Delivered design system in MUI",
-        "Optimized bundle size and CLS",
-        "Implemented E2E tests and a11y checks"
-      ],
-      "tags": ["MUI", "React", "Playwright", "Lighthouse"]
-    },
-    {
-      "company": "Startup Labs",
-      "role": "Full‑Stack Developer",
-      "period": "2018 – 2020",
+      "company": "Scandinavian Good Business AB",
+      "role": "Full-Stack Developer",
+      "period": "2024 – Present",
       "logo": "/company3.jpg",
-      "summary": "Prototyped quickly, validated features with users, and iterated towards product‑market fit.",
+      "summary": "Architected and built scalable systems, secure RESTful APIs, and integrations (Laravel, Symfony) connecting Capeway and Zoho Invoices.",
       "highlights": [
-        "Built MVPs in weeks",
-        "Integrated payments + analytics",
-        "Automated ops with scripts"
+        "Designed the overall architecture of the system, covering planning, development, testing, and deployment phases.",
+        "Developed secure and scalable RESTful APIs with Laravel and Symfony, integrating third-party services such as Capeway and Zoho Invoices.",
+        "Designed interactive, real-time canvases with ES6 + GoJS for dynamic data visualization.",
+        "Led front-end architecture, optimizing user interactions and improving UX across core business flows."
       ],
-      "tags": ["Express", "MongoDB", "Stripe", "Automation"]
+      "tags": [
+        "System Architecture",
+        "Laravel",
+        "Symfony",
+        "REST API",
+        "JavaScript ES6",
+        "GoJS"
+      ]
+    },
+    {
+      "company": "Inriver - Incorporated",
+      "role": "Full-Stack Developer",
+      "period": "12/2022 – 01/2024",
+      "logo": "/company2.png",
+      "summary": "Delivered APIs, ETL pipelines, and enterprise-grade integrations using Node.js, Express, React, and Vue/Nuxt for multi-platform data presentation.",
+      "highlights": [
+        "Developed RESTful APIs with Node.js + Express to support data exchange and integrations.",
+        "Built ETL APIs to handle Extract-Transform-Load (ETL) processes, streamlining data ingestion and transformation.",
+        "Created dynamic front-end components with React and Vue.js/Nuxt to present data consistently across different platforms.",
+        "Developed processing and display pipelines that ensured seamless visualization of enterprise data.",
+        "Implemented CI/CD pipelines using Azure DevOps for automated builds, testing, and deployments.",
+        "Optimized API performance with middleware, validation, and error-handling patterns for enterprise reliability."
+      ],
+      "tags": [
+        "Node.js",
+        "Express",
+        "REST API",
+        "React",
+        "Vue.js",
+        "Nuxt",
+        "Azure DevOps",
+        "CI/CD"
+      ]
+    },
+
+    {
+      "company": "Envireau Pacific Incorporated",
+      "role": "Full-Stack Developer",
+      "period": "01/2020 – 12/2022",
+      "logo": "/company1.png",
+      "summary": "Architected and developed financial systems and dashboards (Vue + Laravel), building RESTful APIs and collaborating with Finance/CPA teams for accurate reporting and reconciliation.",
+      "highlights": [
+        "Designed the system architecture from scratch, including planning, development, testing, and deployment.",
+        "Built RESTful APIs in Laravel to support accounting workflows, payment tracking, and reporting modules.",
+        "Developed an Accounting Collection System (Vue + Laravel) to manage accounts, payments, and aging balances.",
+        "Created a Sales Dashboard to track product movement, generate monthly reports, and align sales targets with finance KPIs.",
+        "Collaborated closely with the Finance and CPA team to ensure accurate reports, data integrity, and balance reconciliation."
+      ],
+      "tags": [
+        "System Architecture",
+        "Vue.js",
+        "Laravel",
+        "REST API",
+        "Accounting Systems",
+        "Dashboards",
+        "Finance Collaboration"
+      ]
     }
   ],
+  "skills": {
+    "frontend": [
+      { "name": "Vue", "score": 9 },
+      { "name": "React", "score": 9 },
+      { "name": "jQuery", "score": 9 },
+      { "name": "Tailwind", "score": 7 },
+      { "name": "Quasar", "score": 8 },
+      { "name": "Chakra UI", "score": 5 },
+      { "name": "Material UI", "score": 7 }
+    ],
+    "backend": [
+      { "name": "Laravel", "score": 9 },
+      { "name": "Express (Node.js)", "score": 9 },
+      { "name": "CodeIgniter", "score": 9 }
+    ],
+    "databaseCloud": [
+      { "name": "MySQL", "score": 9 },
+      { "name": "MSSQL", "score": 9 },
+      { "name": "Firebase", "score": 7 },
+      { "name": "Azure DevOps", "score": 7 },
+      { "name": "Git", "score": 9 }
+    ],
+    "automationTesting": [
+      { "name": "PHPUnit", "score": 8 },
+      { "name": "Cypress", "score": 8 },
+      { "name": "Postman", "score": 9 },
+      { "name": "Swagger", "score": 9 }
+    ],
+    "automation": [
+      { "name": "Power Automate", "score": 9 },
+      { "name": "GoHighLevel", "score": 7 }
+    ]
+  },
   "contact": {
     "address": {
       "line1": "Van Creative Studio",
