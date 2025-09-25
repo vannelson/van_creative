@@ -29,7 +29,7 @@ export default function Sidebar() {
     <Paper
       sx={{
         p: { xs: 2, md: 3 },
-        position: { xs: 'static', md: 'sticky' },
+        position: { xs: "static", md: "sticky" },
         top: { md: 0 },
         display: "flex",
         flexDirection: "column",
@@ -37,8 +37,8 @@ export default function Sidebar() {
         overflow: "hidden",
         background: `linear-gradient(180deg, rgba(34, 197, 94, 0.08), transparent 20%),
           linear-gradient(180deg, rgba(16, 185, 129, 0.06), transparent 60%)`,
-        border: { xs: 'none', md: '1px solid' },
-        borderColor: { xs: 'transparent', md: 'divider' },
+        border: { xs: "none", md: "1px solid" },
+        borderColor: { xs: "transparent", md: "divider" },
         backdropFilter: "saturate(120%) blur(8px)",
         borderRadius: { xs: 0, md: 2 },
       }}
@@ -60,7 +60,7 @@ export default function Sidebar() {
           VC
         </Avatar>
         <Box textAlign="center">
-          <Typography variant="h6">Van Creative</Typography>
+          <Typography variant="h6">Van Nelson Sim P Umbay</Typography>
           <Chip
             label="Full-Stack Developer"
             color="primary"
@@ -84,19 +84,19 @@ export default function Sidebar() {
           <ListItemIcon>
             <PhoneIcon />
           </ListItemIcon>
-          <ListItemText primary="(+1) 555-0123" secondary="Phone" />
+          <ListItemText primary="0993 854 5594" secondary="Phone" />
         </ListItem>
         <ListItem dense>
           <ListItemIcon>
             <WhatsAppIcon />
           </ListItemIcon>
-          <ListItemText primary="(+1) 555-0456" secondary="WhatsApp" />
+          <ListItemText primary="0993 854 5594" secondary="WhatsApp" />
         </ListItem>
         <ListItem dense>
           <ListItemIcon>
             <PhoneIcon />
           </ListItemIcon>
-          <ListItemText primary="(+1) 555-0789" secondary="Viber" />
+          <ListItemText primary="0916 982 5856" secondary="Viber" />
         </ListItem>
         <ListItem dense>
           <ListItemIcon>

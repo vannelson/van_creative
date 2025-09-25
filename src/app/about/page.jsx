@@ -98,19 +98,15 @@ export default function AboutPage() {
             }}
           >
             <Box>
-              <Chip
-                label="Full-Stack Developer"
-                color="primary"
-                size="small"
-                sx={{ mb: 1, fontWeight: 700 }}
-              />
               <Typography variant="h4" gutterBottom>
                 About Me
               </Typography>
               <Typography color="text.secondary" sx={{ mb: 2 }}>
-                I'm a creative full-stack developer focused on building fast,
-                accessible, and beautiful web experiences. I ship thoughtfully
-                designed products with solid engineering foundations.
+                Full-stack developer with 5 years of experience in frontend and
+                backend development. Proficient in designing and implementing
+                RESTful APIs, creating responsive and user-friendly interfaces,
+                and applying best practices. Strong ability to provide practical
+                solutions to complex problems
               </Typography>
               <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2, mb: 2 }}>
                 <Box sx={{ display: "flex", alignItems: "center", gap: 1.25 }}>
@@ -124,19 +120,6 @@ export default function AboutPage() {
                   />
                   <Typography variant="body2" color="text.secondary">
                     5+ years experience
-                  </Typography>
-                </Box>
-                <Box sx={{ display: "flex", alignItems: "center", gap: 1.25 }}>
-                  <Box
-                    sx={{
-                      width: 8,
-                      height: 8,
-                      borderRadius: 999,
-                      bgcolor: "primary.main",
-                    }}
-                  />
-                  <Typography variant="body2" color="text.secondary">
-                    30+ projects shipped
                   </Typography>
                 </Box>
                 <Box sx={{ display: "flex", alignItems: "center", gap: 1.25 }}>

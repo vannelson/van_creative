@@ -258,21 +258,22 @@ export default function ContactPage() {
                   <Stack direction="row" spacing={1} alignItems="center">
                     <EmailIcon color="primary" />
                     <Typography color="text.secondary">
-                      hello@vancreative.dev
+                      vannelsonsimumbay@gmail.com
                     </Typography>
                   </Stack>
                   <Stack direction="row" spacing={1} alignItems="center">
                     <PhoneIcon color="primary" />
                     <Typography color="text.secondary">
-                      (+1) 555-0123
+                      0993 854 5594
                     </Typography>
                   </Stack>
                   <Stack direction="row" spacing={1} alignItems="center">
                     <WhatsAppIcon color="primary" />
                     <Typography color="text.secondary">
-                      (+1) 555-0456
+                      0993 854 5594
                     </Typography>
                   </Stack>
+                  s
                 </Stack>
                 <Box
                   sx={{
