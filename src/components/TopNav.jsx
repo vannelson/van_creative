@@ -4,32 +4,9 @@ import React from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { Chip, Stack, Paper, Drawer, IconButton, Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import InfoIcon from "@mui/icons-material/Info";
-import DescriptionIcon from "@mui/icons-material/Description";
-import WorkIcon from "@mui/icons-material/Work";
-import ArticleIcon from "@mui/icons-material/Article";
-import ContactMailIcon from "@mui/icons-material/ContactMail";
 import Sidebar from "@/components/Sidebar";
-
-const links = [
-  { href: "/about", label: "About", icon: <InfoIcon fontSize="small" /> },
-  {
-    href: "/experience",
-    label: "Experience",
-    icon: <DescriptionIcon fontSize="small" />,
-  },
-  {
-    href: "/projects",
-    label: "Projects",
-    icon: <WorkIcon fontSize="small" />,
-  },
-  { href: "/blog", label: "Blog", icon: <ArticleIcon fontSize="small" /> },
-  {
-    href: "/contact",
-    label: "Contact",
-    icon: <ContactMailIcon fontSize="small" />,
-  },
-];
+import siteData from "@/data/siteData.json";
+import { getIcon } from "@/lib/iconMap";
 
 export default function TopNav() {
   const pathname = usePathname() || "/about";
@@ -59,13 +36,13 @@ export default function TopNav() {
             <MenuIcon />
           </IconButton>
         </Box>
-        {links.map((l) => {
+        {siteData.nav.map((l) => {
           const active = pathname === l.href || (pathname === "/" && l.href === "/about");
           return (
             <Chip
               key={l.href}
               component="button"
-              icon={l.icon}
+              icon={getIcon(l.icon, { fontSize: "small" })}
               label={l.label}
               color={active ? "primary" : undefined}
               variant={active ? "filled" : "outlined"}

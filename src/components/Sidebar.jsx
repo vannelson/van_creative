@@ -1,28 +1,13 @@
 "use client";
 
-import {
-  Avatar,
-  Box,
-  Chip,
-  Divider,
-  IconButton,
-  List,
-  ListItem,
-  ListItemAvatar,
-  ListItemIcon,
-  ListItemText,
-  Paper,
-  Stack,
-  Tooltip,
-  Typography,
-} from "@mui/material";
+import { Avatar, Box, Chip, Divider, IconButton, List, ListItem, ListItemIcon, ListItemText, Paper, Stack, Tooltip, Typography } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import LanguageIcon from "@mui/icons-material/Language";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import siteData from "@/data/siteData.json";
 
 export default function Sidebar() {
   return (
@@ -44,30 +29,12 @@ export default function Sidebar() {
       }}
     >
       <Stack spacing={2} alignItems="center">
-        <Avatar
-          src="/profile.jpg"
-          alt="Profile"
-          sx={{
-            width: { xs: 96, md: 120, lg: 140 },
-            height: { xs: 96, md: 120, lg: 140 },
-            bgcolor: "primary.main",
-            color: "primary.contrastText",
-            fontWeight: 800,
-            boxShadow: (t) =>
-              `0 0 0 3px ${t.palette.primary.main}33, 0 0 0 6px rgba(0,0,0,0.25)`,
-          }}
-        >
-          VC
+        <Avatar src={siteData.profile.avatar} alt="Profile" sx={{ width: { xs: 96, md: 120, lg: 140 }, height: { xs: 96, md: 120, lg: 140 }, bgcolor: "primary.main", color: "primary.contrastText", fontWeight: 800, boxShadow: (t) => `0 0 0 3px ${t.palette.primary.main}33, 0 0 0 6px rgba(0,0,0,0.25)` }}>
+          {siteData.profile.initials}
         </Avatar>
         <Box textAlign="center">
-          <Typography variant="h6">Van Nelson Sim P Umbay</Typography>
-          <Chip
-            label="Full-Stack Developer"
-            color="primary"
-            variant="filled"
-            size="small"
-            sx={{ mt: 1, fontWeight: 700 }}
-          />
+          <Typography variant="h6">{siteData.profile.name}</Typography>
+          <Chip label={siteData.profile.title} color="primary" variant="filled" size="small" sx={{ mt: 1, fontWeight: 700 }} />
         </Box>
       </Stack>
 
@@ -75,34 +42,24 @@ export default function Sidebar() {
 
       <List sx={{ width: "100%", py: 0, flex: 1, overflow: "auto" }}>
         <ListItem dense>
-          <ListItemIcon>
-            <EmailIcon />
-          </ListItemIcon>
-          <ListItemText primary="hello@vancreative.com" secondary="Email" />
+          <ListItemIcon><EmailIcon /></ListItemIcon>
+          <ListItemText primary={siteData.profile.email} secondary="Email" />
         </ListItem>
         <ListItem dense>
-          <ListItemIcon>
-            <PhoneIcon />
-          </ListItemIcon>
-          <ListItemText primary="0993 854 5594" secondary="Phone" />
+          <ListItemIcon><PhoneIcon /></ListItemIcon>
+          <ListItemText primary={siteData.profile.phone} secondary="Phone" />
         </ListItem>
         <ListItem dense>
-          <ListItemIcon>
-            <WhatsAppIcon />
-          </ListItemIcon>
-          <ListItemText primary="0993 854 5594" secondary="WhatsApp" />
+          <ListItemIcon><WhatsAppIcon /></ListItemIcon>
+          <ListItemText primary={siteData.profile.whatsapp} secondary="WhatsApp" />
         </ListItem>
         <ListItem dense>
-          <ListItemIcon>
-            <PhoneIcon />
-          </ListItemIcon>
-          <ListItemText primary="0916 982 5856" secondary="Viber" />
+          <ListItemIcon><PhoneIcon /></ListItemIcon>
+          <ListItemText primary={siteData.profile.viber} secondary="Viber" />
         </ListItem>
         <ListItem dense>
-          <ListItemIcon>
-            <LocationOnIcon />
-          </ListItemIcon>
-          <ListItemText primary="Remote — Worldwide" secondary="Location" />
+          <ListItemIcon><LocationOnIcon /></ListItemIcon>
+          <ListItemText primary={siteData.profile.location} secondary="Location" />
         </ListItem>
       </List>
 
@@ -116,24 +73,12 @@ export default function Sidebar() {
         }}
       >
         <Tooltip title="GitHub">
-          <IconButton
-            color="primary"
-            size="small"
-            href="https://github.com"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <IconButton color="primary" size="small" href={siteData.profile.social.github || undefined} target="_blank" rel="noreferrer">
             <GitHubIcon />
           </IconButton>
         </Tooltip>
         <Tooltip title="LinkedIn">
-          <IconButton
-            color="primary"
-            size="small"
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <IconButton color="primary" size="small" href={siteData.profile.social.linkedin || undefined} target="_blank" rel="noreferrer">
             <LinkedInIcon />
           </IconButton>
         </Tooltip>
@@ -141,3 +86,4 @@ export default function Sidebar() {
     </Paper>
   );
 }
+

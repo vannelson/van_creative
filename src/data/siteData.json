@@ -1,0 +1,154 @@
+{
+  "profile": {
+    "name": "Van Nelson Sim P Umbay",
+    "title": "Full-Stack Developer",
+    "avatar": "/profile.jpg",
+    "initials": "VC",
+    "location": "Remote — Worldwide",
+    "email": "connect@vanumbaycreative.io",
+    "phone": "0993 854 5594",
+    "whatsapp": "0993 854 5594",
+    "viber": "0916 982 5856",
+    "availability": "Mon–Fri, 8am–6pm (UTC-5)",
+    "social": {
+      "github": "https://github.com/vannelson",
+      "linkedin": "https://www.linkedin.com/in/van-nelson-sim-umbay-6793b5241/",
+      "website": null
+    }
+  },
+  "nav": [
+    { "href": "/about", "label": "About", "icon": "Info" },
+    { "href": "/experience", "label": "Experience", "icon": "Description" },
+    { "href": "/projects", "label": "Projects", "icon": "Work" },
+    { "href": "/contact", "label": "Contact", "icon": "ContactMail" }
+  ],
+  "services": [
+    {
+      "icon": "Code",
+      "title": "Front-End Developer",
+      "desc": "Vue, React, Next.js, Nuxt.js Jquery modern UI/UX",
+      "tags": ["React", "Next.js", "Nuxt", "Vue"]
+    },
+    {
+      "icon": "Dns",
+      "title": "Back-End Developer",
+      "desc": "Node.js, REST/GraphQL, Laravel Php",
+      "tags": ["Node.js", "Express", "Laravel"]
+    },
+    {
+      "icon": "Storage",
+      "title": "Database",
+      "desc": "Design, performance, migrations",
+      "tags": ["PostgreSQL", "MySQL", "MongoDB", "firebase"]
+    },
+    {
+      "icon": "AutoMode",
+      "title": "Automation And Support",
+      "desc": "Workflow + business automation",
+      "tags": ["Power Automate", "GoHighLevel"]
+    },
+    {
+      "icon": "BugReport",
+      "title": "Testing / QA",
+      "desc": "Unit, E2E, performance checks",
+      "tags": ["Jest", "Playwright", "Cypress", "Postman", "swagger"]
+    },
+    {
+      "icon": "CloudDone",
+      "title": "GitHub & Azure CI/CD",
+      "desc": "Pipelines, Actions, releases",
+      "tags": ["GitHub Actions", "Azure DevOps", "Pipelines"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "Rentals",
+      "title": "Car Rentals Phil",
+      "desc": "A modern web platform for hassle-free car rentals across the Philippines, offering real-time availability, transparent pricing, and secure booking options.",
+      "objective": "Provide a seamless and reliable car rental experience with a fast, user-friendly interface that supports mobile devices, ensures smooth navigation, and builds customer trust.",
+      "images": ["/project1/1.PNG", "/project1/2.PNG", "/project1/3.PNG"],
+      "url": "#",
+      "tags": ["React.js", "Laravel", "Design"]
+    },
+    {
+      "id": "Music",
+      "title": "Music Apps",
+      "desc": "An engaging platform for streaming and discovering music, featuring curated playlists, personalized recommendations, and social sharing capabilities.",
+      "objective": "Deliver a smooth and personalized music experience with modern features, focusing on fast streaming, intuitive UI, and scalable infrastructure for large user bases.",
+      "images": ["/project2/1.jpg", "/project2/2.jpg", "/project2/3.jpg"],
+      "url": "#",
+      "tags": ["Vue", "Node.js", "Firebase"]
+    },
+
+    {
+      "id": "Scanda",
+      "title": "Scandinavian Good Business AB",
+      "desc": "A CRM platform with invoicing, payment handling, order management, and e-commerce integration, designed to simplify and automate everyday business processes.",
+      "objective": "Optimize and streamline core business workflows with a mobile-first approach, ensuring high performance, scalability, and an improved user experience.",
+      "images": ["/project3/1.jpg", "/project3/2.jpg", "/project3/3.jpg"],
+      "url": "#",
+      "tags": ["Laravel", "Vue", "CodeIgniter", "boostrap"]
+    },
+    {
+      "id": "EPI Phil",
+      "title": "Sales Dashboard / Collection ",
+      "desc": "A CRM and reporting platform with invoicing, payment handling, order management, and e-commerce integration. It also provides advanced sales analytics, including monthly, weekly, and yearly reports, product monitoring, sales tracking, product movement analysis, and collection reports such as PDC monitoring.",
+      "objective": "Deliver a comprehensive business intelligence tool that optimizes workflows, enhances decision-making, and provides real-time visibility into sales and collections with a mobile-first, scalable, and high-performance design.",
+      "images": ["/project3/1.jpg", "/project3/2.jpg", "/project3/3.jpg"],
+      "url": "#",
+      "tags": ["Laravel", "Vue", "React", "Node"]
+    }
+  ],
+  "experiences": [
+    {
+      "company": "Envireau Pacific Incorporated",
+      "role": "Fullstack Developer",
+      "period": "2023 – Present",
+      "logo": "/company1.png",
+      "summary": "Leading product initiatives across web apps with a focus on performance, DX, and delightful UI.",
+      "highlights": [
+        "Created Accounting Collection System using Vue and Laravel; tracked client accounts and payable aging.",
+        "Scaled APIs and caching for 10x traffic",
+        "Mentored devs; improved DX and CI/CD"
+      ],
+      "tags": ["Next.js", "Node.js", "PostgreSQL", "CI/CD"]
+    },
+    {
+      "company": "Tech Studio",
+      "role": "Frontend Engineer",
+      "period": "2020 – 2023",
+      "logo": "/company2.png",
+      "summary": "Built component libraries and modern UIs, collaborating with design to raise quality bars.",
+      "highlights": [
+        "Delivered design system in MUI",
+        "Optimized bundle size and CLS",
+        "Implemented E2E tests and a11y checks"
+      ],
+      "tags": ["MUI", "React", "Playwright", "Lighthouse"]
+    },
+    {
+      "company": "Startup Labs",
+      "role": "Full‑Stack Developer",
+      "period": "2018 – 2020",
+      "logo": "/company3.jpg",
+      "summary": "Prototyped quickly, validated features with users, and iterated towards product‑market fit.",
+      "highlights": [
+        "Built MVPs in weeks",
+        "Integrated payments + analytics",
+        "Automated ops with scripts"
+      ],
+      "tags": ["Express", "MongoDB", "Stripe", "Automation"]
+    }
+  ],
+  "contact": {
+    "address": {
+      "line1": "Van Creative Studio",
+      "line2": "123 Creative Street",
+      "line3": "Innovation District",
+      "city": "San Francisco",
+      "region": "CA",
+      "postal": "94105",
+      "country": "United States"
+    }
+  }
+}
