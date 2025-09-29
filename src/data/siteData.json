@@ -97,10 +97,10 @@
       "desc": "A collections and AR reporting module covering invoicing, payment handling, receivables aging, PDC monitoring, and cashflow insights with audit-friendly logs and exportable reports.",
       "objective": "Improve cash collection efficiency, reduce DSO, and give finance teams real-time visibility into receivables and post-dated checks with a secure, scalable, mobile-first design.",
       "images": [
-        "/pro_collection/1.png",
-        "/pro_collection/2.png",
-        "/pro_collection/3.png",
-        "/pro_collection/4.png"
+        "/pro_collection2/1.png",
+        "/pro_collection2/2.png",
+        "/pro_collection2/3.png",
+        "/pro_collection2/4.png"
       ],
       "url": "local",
       "tags": ["Laravel", "React", "React", "Node"]
@@ -111,10 +111,10 @@
       "desc": "A business intelligence dashboard for real-time sales analytics, including monthly/weekly/yearly trends, product monitoring, sales tracking, and product movement analysis with drill-down KPIs.",
       "objective": "Provide clear, actionable insights to boost revenue, forecast demand, and optimize product performance with a mobile-first, scalable, high-performance design.",
       "images": [
-        "/pro_dash/1.png",
-        "/pro_dash/2.png",
-        "/pro_dash/3.png",
-        "/pro_dash/4.png"
+        "/pro_dash2/1.png",
+        "/pro_dash2/2.png",
+        "/pro_dash2/3.png",
+        "/pro_dash2/4.png"
       ],
       "url": "local",
       "tags": ["Laravel", "Vue", "React", "Node"]
