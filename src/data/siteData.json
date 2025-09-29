@@ -120,6 +120,15 @@
       "tags": ["Laravel", "Vue", "React", "Node"]
     },
     {
+      "id": "skillwise",
+      "title": "Start Up Skillwise Marketing Landing Page",
+      "desc": "An interactive landing page designed to showcase Skillwise’s startup services with a modern, responsive design focused on user engagement and lead generation.",
+      "objective": "Create a high-converting, responsive landing page that highlights services and drives customer engagement.",
+      "images": ["/pro_skillwise/1.png", "/pro_skillwise/2.png"],
+      "url": "https://skillwiseph.com/home",
+      "tags": ["Javascript", "Wordpress"]
+    },
+    {
       "id": "Music Sound Trip",
       "title": "Music Sound Trip",
       "desc": "An interactive platform that lets users explore, play, and share music journeys. It provides features like curated playlists, album and song management, and dynamic sound experiences for a more immersive listening adventure.",
