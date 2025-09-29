@@ -111,10 +111,10 @@
       "desc": "A business intelligence dashboard for real-time sales analytics, including monthly/weekly/yearly trends, product monitoring, sales tracking, and product movement analysis with drill-down KPIs.",
       "objective": "Provide clear, actionable insights to boost revenue, forecast demand, and optimize product performance with a mobile-first, scalable, high-performance design.",
       "images": [
-        "/pro_dashboard/1.png",
-        "/pro_dashboard/2.png",
-        "/pro_dashboard/3.png",
-        "/pro_dashboard/4.png"
+        "/pro_dash/1.png",
+        "/pro_dash/2.png",
+        "/pro_dash/3.png",
+        "/pro_dash/4.png"
       ],
       "url": "local",
       "tags": ["Laravel", "Vue", "React", "Node"]
