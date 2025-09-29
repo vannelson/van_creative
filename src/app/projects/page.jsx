@@ -13,6 +13,32 @@ export default function ProjectsPage() {
   const [active, setActive] = useState(null);
   const [idx, setIdx] = useState(0);
 
+  const isLocalUrl = (url) => {
+    if (!url) return true;
+    const u = String(url).trim().toLowerCase();
+    if (u === "local" || u === "localhost") return true;
+    try {
+      const parsed = new URL(u.startsWith("http") ? u : `http://${u}`);
+      const host = parsed.hostname;
+      if (
+        host === "localhost" ||
+        host === "127.0.0.1" ||
+        host.startsWith("10.") ||
+        host.startsWith("192.168.") ||
+        (host.startsWith("172.") && (() => {
+          const seg = Number(host.split(".")[1]);
+          return seg >= 16 && seg <= 31;
+        })())
+      ) {
+        return true;
+      }
+    } catch (_) {
+      // If it can't be parsed as URL, treat as local sentinel
+      return true;
+    }
+    return false;
+  };
+
   const handleOpen = (p) => {
     setActive(p);
     setIdx(0);
@@ -76,9 +102,15 @@ export default function ProjectsPage() {
           )}
         </DialogContent>
         <DialogActions>
-          <Button href={active?.url || '#'} target="_blank" rel="noreferrer" variant="contained" color="primary">
-            Go to Project
-          </Button>
+          {active && !isLocalUrl(active.url) ? (
+            <Button href={active?.url || '#'} target="_blank" rel="noreferrer" variant="contained" color="primary">
+              Go to Project
+            </Button>
+          ) : (
+            <Typography variant="body2" color="text.secondary">
+              This system is installed locally or on a private WAN and is for company use only.
+            </Typography>
+          )}
         </DialogActions>
       </Dialog>
     </Stack>

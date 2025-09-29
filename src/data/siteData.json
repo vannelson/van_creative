@@ -63,40 +63,70 @@
   ],
   "projects": [
     {
-      "id": "Rentals",
-      "title": "Car Rentals Phil",
-      "desc": "A modern web platform for hassle-free car rentals across the Philippines, offering real-time availability, transparent pricing, and secure booking options.",
-      "objective": "Provide a seamless and reliable car rental experience with a fast, user-friendly interface that supports mobile devices, ensures smooth navigation, and builds customer trust.",
-      "images": ["/project1/1.PNG", "/project1/2.PNG", "/project1/3.PNG"],
-      "url": "#",
-      "tags": ["React.js", "Laravel", "Design"]
-    },
-    {
-      "id": "Music",
-      "title": "Music Apps",
-      "desc": "An engaging platform for streaming and discovering music, featuring curated playlists, personalized recommendations, and social sharing capabilities.",
-      "objective": "Deliver a smooth and personalized music experience with modern features, focusing on fast streaming, intuitive UI, and scalable infrastructure for large user bases.",
-      "images": ["/project2/1.jpg", "/project2/2.jpg", "/project2/3.jpg"],
-      "url": "#",
-      "tags": ["Vue", "Node.js", "Firebase"]
-    },
-    {
       "id": "Scanda",
       "title": "Scandinavian Good Business AB",
       "desc": "A CRM platform with invoicing, payment handling, order management, and e-commerce integration, designed to simplify and automate everyday business processes.",
       "objective": "Optimize and streamline core business workflows with a mobile-first approach, ensuring high performance, scalability, and an improved user experience.",
-      "images": ["/project3/1.jpg", "/project3/2.jpg", "/project3/3.jpg"],
-      "url": "#",
+      "images": [
+        "/pro_scand/1.png",
+        "/pro_scand/2.png",
+        "/pro_scand/3.png",
+        "/pro_scand/4.png"
+      ],
+      "url": "https://backend.gracewellness.se/shop/backend/dashboard",
       "tags": ["Laravel", "Vue", "CodeIgniter", "boostrap"]
     },
     {
-      "id": "EPI Phil",
-      "title": "Sales Dashboard / Collection ",
-      "desc": "A CRM and reporting platform with invoicing, payment handling, order management, and e-commerce integration. It also provides advanced sales analytics, including monthly, weekly, and yearly reports, product monitoring, sales tracking, product movement analysis, and collection reports such as PDC monitoring.",
-      "objective": "Deliver a comprehensive business intelligence tool that optimizes workflows, enhances decision-making, and provides real-time visibility into sales and collections with a mobile-first, scalable, and high-performance design.",
-      "images": ["/project3/1.jpg", "/project3/2.jpg", "/project3/3.jpg"],
-      "url": "#",
+      "id": "KNP",
+      "title": "Scheduler and Event Monitoring platform",
+      "desc": "A platform designed to manage schedules, track events, and monitor activities in real time, helping organizations streamline planning and execution.",
+      "objective": "Provide an efficient scheduling and event monitoring solution that enhances coordination, automates reminders, and delivers real-time visibility into events and tasks with a scalable, mobile-first design.",
+      "images": [
+        "/pro_knp/1.png",
+        "/pro_knp/2.png",
+        "/pro_knp/3.png",
+        "/pro_knp/4.png"
+      ],
+      "url": "https://backend.gracewellness.se/shop/backend/dashboard",
+      "tags": ["Express.js", "react", "Tailwind"]
+    },
+
+    {
+      "id": "EPI Phil - Collections",
+      "title": "Collection Reports / PDC Monitoring",
+      "desc": "A collections and AR reporting module covering invoicing, payment handling, receivables aging, PDC monitoring, and cashflow insights with audit-friendly logs and exportable reports.",
+      "objective": "Improve cash collection efficiency, reduce DSO, and give finance teams real-time visibility into receivables and post-dated checks with a secure, scalable, mobile-first design.",
+      "images": [
+        "/pro_collection/1.png",
+        "/pro_collection/2.png",
+        "/pro_collection/3.png",
+        "/pro_collection/4.png"
+      ],
+      "url": "local",
+      "tags": ["Laravel", "React", "React", "Node"]
+    },
+    {
+      "id": "EPI Phil - Sales",
+      "title": "Sales Dashboard",
+      "desc": "A business intelligence dashboard for real-time sales analytics, including monthly/weekly/yearly trends, product monitoring, sales tracking, and product movement analysis with drill-down KPIs.",
+      "objective": "Provide clear, actionable insights to boost revenue, forecast demand, and optimize product performance with a mobile-first, scalable, high-performance design.",
+      "images": [
+        "/pro_dashboard/1.png",
+        "/pro_dashboard/2.png",
+        "/pro_dashboard/3.png",
+        "/pro_dashboard/4.png"
+      ],
+      "url": "local",
       "tags": ["Laravel", "Vue", "React", "Node"]
+    },
+    {
+      "id": "Music Sound Trip",
+      "title": "Music Sound Trip",
+      "desc": "An interactive platform that lets users explore, play, and share music journeys. It provides features like curated playlists, album and song management, and dynamic sound experiences for a more immersive listening adventure.",
+      "objective": "Deliver an engaging and user-friendly music experience that combines discovery, personalization, and interactivity, built with a scalable and high-performance design.",
+      "images": ["/pro_music/1.png", "/pro_music/2.png"],
+      "url": "local",
+      "tags": ["Express.js", "Vue", "React", "Node"]
     }
   ],
   "experiences": [
@@ -216,3 +246,42 @@
     }
   }
 }
+
+// "projects": [
+//   {
+//     "id": "Rentals",
+//     "title": "Car Rentals Phil",
+//     "desc": "A modern web platform for hassle-free car rentals across the Philippines, offering real-time availability, transparent pricing, and secure booking options.",
+//     "objective": "Provide a seamless and reliable car rental experience with a fast, user-friendly interface that supports mobile devices, ensures smooth navigation, and builds customer trust.",
+//     "images": ["/project1/1.PNG", "/project1/2.PNG", "/project1/3.PNG"],
+//     "url": "#",
+//     "tags": ["React.js", "Laravel", "Design"]
+//   },
+//   {
+//     "id": "Music",
+//     "title": "Music Apps",
+//     "desc": "An engaging platform for streaming and discovering music, featuring curated playlists, personalized recommendations, and social sharing capabilities.",
+//     "objective": "Deliver a smooth and personalized music experience with modern features, focusing on fast streaming, intuitive UI, and scalable infrastructure for large user bases.",
+//     "images": ["/project2/1.jpg", "/project2/2.jpg", "/project2/3.jpg"],
+//     "url": "#",
+//     "tags": ["Vue", "Node.js", "Firebase"]
+//   },
+//   {
+//     "id": "Scanda",
+//     "title": "Scandinavian Good Business AB",
+//     "desc": "A CRM platform with invoicing, payment handling, order management, and e-commerce integration, designed to simplify and automate everyday business processes.",
+//     "objective": "Optimize and streamline core business workflows with a mobile-first approach, ensuring high performance, scalability, and an improved user experience.",
+//     "images": ["/project3/1.jpg", "/project3/2.jpg", "/project3/3.jpg"],
+//     "url": "#",
+//     "tags": ["Laravel", "Vue", "CodeIgniter", "boostrap"]
+//   },
+//   {
+//     "id": "EPI Phil",
+//     "title": "Sales Dashboard / Collection ",
+//     "desc": "A CRM and reporting platform with invoicing, payment handling, order management, and e-commerce integration. It also provides advanced sales analytics, including monthly, weekly, and yearly reports, product monitoring, sales tracking, product movement analysis, and collection reports such as PDC monitoring.",
+//     "objective": "Deliver a comprehensive business intelligence tool that optimizes workflows, enhances decision-making, and provides real-time visibility into sales and collections with a mobile-first, scalable, and high-performance design.",
+//     "images": ["/project3/1.jpg", "/project3/2.jpg", "/project3/3.jpg"],
+//     "url": "#",
+//     "tags": ["Laravel", "Vue", "React", "Node"]
+//   }
+// ],

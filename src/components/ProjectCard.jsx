@@ -120,9 +120,9 @@ export default function ProjectCard({ project, onOpen }) {
             </Box>
           )}
           <Stack direction="row" spacing={0.75} flexWrap="wrap">
-            {p.tags.map((t) => (
+            {p.tags.map((t, i) => (
               <Chip
-                key={t}
+                key={`${t}-${i}`}
                 label={t}
                 size="small"
                 variant="outlined"
@@ -136,4 +136,3 @@ export default function ProjectCard({ project, onOpen }) {
     </Card>
   );
 }
-
