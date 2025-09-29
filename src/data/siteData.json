@@ -125,7 +125,7 @@
       "desc": "An interactive platform that lets users explore, play, and share music journeys. It provides features like curated playlists, album and song management, and dynamic sound experiences for a more immersive listening adventure.",
       "objective": "Deliver an engaging and user-friendly music experience that combines discovery, personalization, and interactivity, built with a scalable and high-performance design.",
       "images": ["/pro_music/1.png", "/pro_music/2.png"],
-      "url": "local",
+      "url": "https://auto-music.vercel.app/",
       "tags": ["Express.js", "Vue", "React", "Node"]
     }
   ],
