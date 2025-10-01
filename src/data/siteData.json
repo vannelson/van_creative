@@ -142,7 +142,7 @@
     {
       "company": "Scandinavian Good Business AB",
       "role": "Full-Stack Developer",
-      "period": "2024 – Present",
+      "period": "2024 – 2025",
       "logo": "/company3.jpg",
       "summary": "Architected and built scalable systems, secure RESTful APIs, and integrations (Laravel, Symfony) connecting Capeway and Zoho Invoices.",
       "highlights": [
@@ -163,7 +163,7 @@
     {
       "company": "Inriver - Incorporated",
       "role": "Full-Stack Developer",
-      "period": "12/2022 – 01/2024",
+      "period": "12/2019 – 01/2024",
       "logo": "/company2.png",
       "summary": "Delivered APIs, ETL pipelines, and enterprise-grade integrations using Node.js, Express, React, and Vue/Nuxt for multi-platform data presentation.",
       "highlights": [
