@@ -5,7 +5,7 @@
     "avatar": "/profile.jpg",
     "initials": "VC",
     "location": "Remote — Worldwide",
-    "email": "connect@vanumbaycreative.io",
+    "email": "vannelsonsim_umbay@outlook.com",
     "phone": "0993 854 5594",
     "whatsapp": "0993 854 5594",
     "viber": "0916 982 5856",
@@ -26,6 +26,12 @@
   ],
   "services": [
     {
+      "icon": "AutoMode",
+      "title": "Power Automate Microsoft 365",
+      "desc": "Workflow + business automation",
+      "tags": ["SharePoint", "Power Apps", "Excel", "Power Automate"]
+    },
+    {
       "icon": "Code",
       "title": "Front-End Developer",
       "desc": "Vue, React, Next.js, Nuxt.js Jquery modern UI/UX",
@@ -39,21 +45,16 @@
     },
     {
       "icon": "Storage",
-      "title": "Database",
-      "desc": "Design, performance, migrations",
-      "tags": ["PostgreSQL", "MySQL", "MongoDB", "firebase"]
-    },
-    {
-      "icon": "AutoMode",
-      "title": "Automation And Support",
+      "title": "Microsoft 365",
       "desc": "Workflow + business automation",
-      "tags": ["Power Automate", "GoHighLevel"]
+      "tags": ["Excel", "Power Apps", "Power Automate", "SharePoint"]
     },
+
     {
       "icon": "BugReport",
-      "title": "Testing / QA",
-      "desc": "Unit, E2E, performance checks",
-      "tags": ["Playwright", "Cypress", "Postman"]
+      "title": "GHL",
+      "desc": "Funnels, contracts, and automation",
+      "tags": ["A2P", "Website Funnel", "Contract", "Automation"]
     },
     {
       "icon": "CloudDone",
@@ -63,6 +64,27 @@
     }
   ],
   "projects": [
+    {
+      "id": "CCL",
+      "title": "CCL Design Singapore",
+      "desc": "Automation and data-handling solution across Microsoft 365 using Power Automate, Power Apps, SharePoint, and Excel to streamline processes and improve reporting. I led client communication, gathered requirements, and used AI to translate them into application code and working solutions.",
+      "objective": "Reduce manual work, improve data quality, and deliver a scalable automation ecosystem with clear, measurable workflow outcomes.",
+      "images": [
+        "/pro_ccl/1.png",
+        "/pro_ccl/2.png",
+        "/pro_ccl/3.png",
+        "/pro_ccl/4.png",
+        "/pro_ccl/6.png"
+      ],
+      "url": "https://ccldesignmes.com/",
+      "tags": [
+        "Power Automate",
+        "Power Apps",
+        "SharePoint",
+        "Excel",
+        "Microsoft 365"
+      ]
+    },
     {
       "id": "Scanda",
       "title": "Scandinavian Good Business AB",
@@ -145,6 +167,29 @@
     }
   ],
   "experiences": [
+    {
+      "company": "Thrive Comprehensive Medical Group",
+      "role": "IT Application Developer (Automation)",
+      "period": "2026 â€“ Present",
+      "logo": "/company6.png",
+      "summary": "Build Microsoft 365 automation solutions across the ecosystem using Power Automate, Power Apps, SharePoint, and Excel to streamline workflows and improve data handling.",
+      "highlights": [
+        "Developed end-to-end automation flows in Power Automate across Microsoft 365 to connect processes and reduce manual work.",
+        "Built Power Apps to enhance Excel-based workflows and improve data accuracy and usability.",
+        "Managed large SharePoint datasets for structured data handling and reporting.",
+        "Led client communication, gathered requirements, translated them into working solutions, and handled change requests.",
+        "Provided support calls and technical troubleshooting to keep systems stable and users productive."
+      ],
+      "tags": [
+        "Microsoft 365",
+        "Power Automate",
+        "Power Apps",
+        "SharePoint",
+        "Excel",
+        "Client Communication",
+        "Troubleshooting"
+      ]
+    },
     {
       "company": "Scandinavian Good Business AB",
       "role": "Full-Stack Developer",

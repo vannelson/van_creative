@@ -47,11 +47,15 @@ export default function AboutPage() {
                 About Me
               </Typography>
               <Typography color="text.secondary" sx={{ mb: 2 }}>
-                Full-stack developer with 5 years of experience in frontend and
-                backend development. Proficient in designing and implementing
-                RESTful APIs, creating responsive and user-friendly interfaces,
-                and applying best practices. Strong ability to provide practical
-                solutions to complex problems
+                IT specialist in automation and application development with
+                5+ years of experience in frontend and backend development,
+                delivering reliable APIs and responsive user interfaces. Over
+                time, I’ve expanded into CRM
+                systems, workflow automation, and client support—building
+                efficient, scalable solutions with tools like GoHighLevel,
+                Power Automate, Power Apps, and AI-driven applications. I
+                combine technical execution with business focus to deliver
+                outcomes that are practical, measurable, and results-driven.
               </Typography>
               <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2, mb: 2 }}>
                 <Box sx={{ display: "flex", alignItems: "center", gap: 1.25 }}>
