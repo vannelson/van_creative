@@ -199,6 +199,7 @@
       "highlights": [
         "Designed the overall architecture of the system, covering planning, development, testing, and deployment phases.",
         "Developed secure and scalable RESTful APIs with Laravel and Symfony, integrating third-party services such as Capeway and Zoho Invoices.",
+        "Customized WordPress templates and developed custom functions to enhance website functionality, performance, and user experience.",
         "Designed interactive, real-time canvases with ES6 + GoJS for dynamic data visualization.",
         "Led front-end architecture, optimizing user interactions and improving UX across core business flows."
       ],
