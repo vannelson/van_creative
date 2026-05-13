@@ -102,8 +102,39 @@ export default function TransferredPortfolio() {
     setLightbox({
       content: item.src,
       Icon: item.Icon,
+      images: item.src ? [item.src] : [],
+      currentIndex: 0,
       isImage: Boolean(item.src),
       label: item.label,
+    });
+  };
+
+  const handleProjectPreview = (project) => {
+    setLightbox({
+      content: project.preview,
+      images: project.images,
+      currentIndex: 0,
+      isImage: true,
+      label: project.title,
+    });
+  };
+
+  const handleLightboxNavigate = (direction) => {
+    setLightbox((previous) => {
+      if (!previous?.images?.length || previous.images.length < 2) {
+        return previous;
+      }
+
+      const nextIndex =
+        direction === "next"
+          ? (previous.currentIndex + 1) % previous.images.length
+          : (previous.currentIndex - 1 + previous.images.length) % previous.images.length;
+
+      return {
+        ...previous,
+        currentIndex: nextIndex,
+        content: previous.images[nextIndex],
+      };
     });
   };
 
@@ -123,7 +154,12 @@ export default function TransferredPortfolio() {
 
       <canvas className={styles.particles} ref={canvasRef} />
 
-      <Lightbox lightbox={lightbox} onClose={() => setLightbox(null)} />
+      <Lightbox
+        lightbox={lightbox}
+        onClose={() => setLightbox(null)}
+        onNext={() => handleLightboxNavigate("next")}
+        onPrev={() => handleLightboxNavigate("prev")}
+      />
       <StoryModal
         content={storyModalContent}
         isOpen={storyModalOpen}
@@ -166,7 +202,11 @@ export default function TransferredPortfolio() {
 
       <div className={styles.divider} />
 
-      <ProjectsSection content={projectsContent} projects={projects} />
+      <ProjectsSection
+        content={projectsContent}
+        onOpenImage={handleProjectPreview}
+        projects={projects}
+      />
 
       <div className={styles.divider} />
 

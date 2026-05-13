@@ -882,6 +882,15 @@
   transform: translateY(-4px);
 }
 
+.projectImageButton {
+  border: none;
+  padding: 0;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
 .projectImage {
   background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(139, 92, 246, 0.08));
   min-height: 220px;
@@ -891,6 +900,15 @@
   font-size: 64px;
   position: relative;
   overflow: hidden;
+}
+
+.projectPreviewImage {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
 }
 
 .projectIconSvg {
@@ -904,6 +922,41 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, transparent 50%, rgba(255, 215, 0, 0.05));
+}
+
+.projectImageOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+  padding: 22px;
+  background: linear-gradient(180deg, rgba(6, 10, 20, 0.05), rgba(6, 10, 20, 0.78));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.projectImageButton:hover .projectImageOverlay {
+  opacity: 1;
+}
+
+.projectImageButton:hover .projectPreviewImage {
+  transform: scale(1.04);
+}
+
+.projectImageOverlayLabel {
+  color: #fff;
+  font-family: var(--font-bebas-neue), cursive;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.projectImageOverlayCount {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 .projectInfo {
@@ -932,13 +985,100 @@
   color: var(--text-dim);
   font-size: 15px;
   line-height: 1.7;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+}
+
+.projectObjective {
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 215, 0, 0.12);
+  background: rgba(255, 215, 0, 0.04);
+}
+
+.projectObjective span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.projectObjective p {
+  color: var(--text-dim);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.projectUrlRow {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.projectUrlLabel {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.projectUrlValue,
+.projectUrlLink {
+  color: var(--text-dim);
+  font-size: 14px;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+.projectUrlLink {
+  text-decoration: none;
+}
+
+.projectUrlLink:hover {
+  color: var(--gold);
 }
 
 .projectTags {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+}
+
+.projectActionRow {
+  margin-top: 18px;
+}
+
+.projectVisitLink,
+.projectLocalPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.projectVisitLink {
+  color: var(--gold);
+  text-decoration: none;
+  border: 1px solid rgba(255, 215, 0, 0.22);
+  background: rgba(255, 215, 0, 0.05);
+}
+
+.projectVisitLink:hover {
+  background: rgba(255, 215, 0, 0.1);
+  border-color: rgba(255, 215, 0, 0.38);
+}
+
+.projectLocalPill {
+  color: var(--text-muted);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .tag {
@@ -1105,22 +1245,22 @@
 }
 
 .experienceTimelineIcon {
-  width: 124px;
-  min-height: 58px;
+  width: 88px;
+  min-height: 44px;
   flex: 0 0 auto;
-  border-radius: 14px;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.96);
   border: 1px solid rgba(255, 215, 0, 0.16);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 14px;
+  padding: 6px 10px;
   box-shadow: 0 0 22px rgba(255, 215, 0, 0.08);
 }
 
 .experienceLogoImage {
   width: 100%;
-  max-height: 42px;
+  max-height: 28px;
   object-fit: contain;
   display: block;
 }
@@ -1547,7 +1687,7 @@
   max-width: 800px;
   text-align: center;
   position: relative;
-  padding: 0 20px;
+  padding: 0 72px;
 }
 
 .lightboxClose {
@@ -1559,6 +1699,30 @@
   cursor: pointer;
   background: none;
   border: none;
+}
+
+.lightboxNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  min-width: 72px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 215, 0, 0.24);
+  background: rgba(10, 15, 30, 0.88);
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.lightboxNavPrev {
+  left: 0;
+}
+
+.lightboxNavNext {
+  right: 0;
 }
 
 .lightboxBody img {
@@ -1578,6 +1742,17 @@
   font-size: 100px !important;
   color: var(--gold);
   filter: drop-shadow(0 0 32px rgba(255, 215, 0, 0.24));
+}
+
+.lightboxMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 14px;
+  color: var(--text-muted);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .toast {

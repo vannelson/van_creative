@@ -210,36 +210,27 @@ export const projectsContent = {
     "Selected work spanning enterprise systems, AI applications, and automation platforms.",
 };
 
-export const projects = [
-  {
-    Icon: BusinessRoundedIcon,
-    category: "Enterprise Systems",
-    title: "Enterprise Resource Management Suite",
-    desc: "A comprehensive operations platform covering inventory, HR, reporting, and analytics for a high-volume organization with AI-assisted forecasting and live dashboards.",
-    tags: ["Laravel", "Vue.js", "MySQL", "Docker"],
-  },
-  {
-    Icon: SmartToyRoundedIcon,
-    category: "AI Application",
-    title: "AI-Powered Support Automation",
-    desc: "An intelligent support workflow that combines large language models with CRM actions to reduce response time and automate repetitive service tasks.",
-    tags: ["LLM API", "Node.js", "GoHighLevel", "Zapier"],
-  },
-  {
-    Icon: InsightsRoundedIcon,
-    category: "CRM System",
-    title: "Sales Pipeline Automation CRM",
-    desc: "A sales orchestration system with lead scoring, follow-up automation, and custom API hooks designed to improve conversion and visibility across the funnel.",
-    tags: ["GoHighLevel", "Power Automate", "REST API"],
-  },
-  {
-    Icon: SpaceDashboardRoundedIcon,
-    category: "SaaS Platform",
-    title: "Multi-Tenant SaaS Dashboard",
-    desc: "A white-label business dashboard with multi-tenant permissions, real-time analytics, and scalable infrastructure for recurring subscription clients.",
-    tags: ["Quasar", "Laravel", "PostgreSQL", "AWS"],
-  },
-];
+const projectCategoryMap = {
+  CCL: "Manufacturing Execution System",
+  Scanda: "CRM Platform",
+  KNP: "Operations Platform",
+  "EPI Phil - Collections": "Finance Reporting",
+  "EPI Phil - Sales": "Sales Dashboard",
+  "skillwise StartUp": "Marketing Website",
+  "Music Sound Trip": "Interactive Platform",
+};
+
+export const projects = siteData.projects.map((project) => ({
+  category: projectCategoryMap[project.id] || "Featured Project",
+  desc: project.desc,
+  id: project.id,
+  images: project.images,
+  objective: project.objective,
+  preview: project.images[0],
+  tags: project.tags,
+  title: project.title,
+  url: project.url,
+}));
 
 export const galleryContent = {
   label: "Visual Journal",

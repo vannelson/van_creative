@@ -66,8 +66,8 @@
     {
       "id": "CCL",
       "title": "CCL Design Singapore",
-      "desc": "Automation and data-handling solution across Microsoft 365 using Power Automate, Power Apps, SharePoint, and Excel to streamline processes and improve reporting. I led client communication, gathered requirements, and used AI to translate them into application code and working solutions.",
-      "objective": "Reduce manual work, improve data quality, and deliver a scalable automation ecosystem with clear, measurable workflow outcomes.",
+      "desc": "A full-stack Manufacturing Execution System (MES) built for CCL Design Singapore to manage work orders, WIP, BOMs, packing, route progress, and quality workflows in one platform while improving visibility across production operations.",
+      "objective": "Modernize manufacturing operations with real-time dashboards, traceability, virtual screens, PDF work packet records, and AI-assisted workflow automation that improves decision-making and reduces manual work.",
       "images": [
         "/pro_ccl/1.png",
         "/pro_ccl/2.png",
@@ -77,11 +77,12 @@
       ],
       "url": "https://ccldesignmes.com/",
       "tags": [
-        "Power Automate",
-        "Power Apps",
-        "SharePoint",
-        "Excel",
-        "Microsoft 365"
+        "React",
+        "Chakra UI",
+        "Redux Toolkit",
+        "Laravel",
+        "MES",
+        "AI Automation"
       ]
     },
     {
