@@ -208,7 +208,8 @@
   flex-shrink: 0;
 }
 
-.navCta a {
+.navCta a,
+.navCta button {
   display: inline-flex;
   align-items: center;
   gap: 7px;
@@ -221,11 +222,14 @@
   letter-spacing: 1.5px;
   text-transform: uppercase;
   text-decoration: none;
+  border: none;
+  cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 0 16px rgba(255, 215, 0, 0.25);
 }
 
-.navCta a:hover {
+.navCta a:hover,
+.navCta button:hover {
   box-shadow: 0 0 28px rgba(255, 215, 0, 0.5);
   transform: translateY(-1px);
 }
@@ -809,12 +813,21 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
+  min-height: 42px;
 }
 
 .skillIconSvg {
   font-size: 34px !important;
   color: var(--gold);
   filter: drop-shadow(0 0 16px rgba(255, 215, 0, 0.2));
+}
+
+.skillLogoImage {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 0 14px rgba(255, 215, 0, 0.12));
 }
 
 .skillName {
@@ -1647,6 +1660,148 @@
   overflow: auto;
 }
 
+.resumeModalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: rgba(3, 6, 14, 0.86);
+  backdrop-filter: blur(18px);
+}
+
+.resumeModalBackdropOpen {
+  display: flex;
+}
+
+.resumeModal {
+  width: min(1120px, 100%);
+  max-height: calc(100vh - 56px);
+  background: linear-gradient(180deg, rgba(10, 15, 30, 0.98), rgba(13, 21, 41, 0.98));
+  border: 1px solid rgba(255, 215, 0, 0.18);
+  border-radius: 20px;
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(255, 215, 0, 0.04);
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+}
+
+.resumeModalHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 32px 18px;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.08);
+  background: linear-gradient(180deg, rgba(255, 215, 0, 0.04), transparent);
+}
+
+.resumeModalHeader h3 {
+  font-family: var(--font-bebas-neue), cursive;
+  font-size: clamp(28px, 3vw, 42px);
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.resumeModalHeader p {
+  color: var(--text-dim);
+  max-width: 620px;
+  line-height: 1.7;
+}
+
+.resumeModalKicker {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.resumeModalClose {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid rgba(255, 215, 0, 0.22);
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.resumeModalClose:hover {
+  background: rgba(255, 215, 0, 0.08);
+  border-color: rgba(255, 215, 0, 0.4);
+}
+
+.resumeModalActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 18px 32px 24px;
+}
+
+.resumeModalPrimaryAction,
+.resumeModalSecondaryAction,
+.resumeModalTertiaryAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.resumeModalPrimaryAction {
+  background: var(--gold);
+  color: #000;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.25);
+}
+
+.resumeModalPrimaryAction:hover {
+  box-shadow: 0 0 34px rgba(255, 215, 0, 0.45);
+  transform: translateY(-1px);
+}
+
+.resumeModalSecondaryAction,
+.resumeModalTertiaryAction {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--gold);
+  border: 1px solid rgba(255, 215, 0, 0.18);
+}
+
+.resumeModalSecondaryAction:hover,
+.resumeModalTertiaryAction:hover {
+  background: rgba(255, 215, 0, 0.08);
+  border-color: rgba(255, 215, 0, 0.32);
+  transform: translateY(-1px);
+}
+
+.resumeFrameWrap {
+  padding: 0 32px 32px;
+  min-height: 0;
+}
+
+.resumeFrame {
+  width: 100%;
+  height: min(72vh, 860px);
+  border: 1px solid rgba(255, 215, 0, 0.12);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.96);
+}
+
 .storyNarrative p {
   color: var(--text-dim);
   font-size: 18px;
@@ -1895,6 +2050,22 @@
 @media (max-width: 600px) {
   .navCta {
     display: none;
+  }
+
+  .resumeModalHeader {
+    padding: 22px 20px 18px;
+  }
+
+  .resumeModalActions {
+    padding: 16px 20px 20px;
+  }
+
+  .resumeFrameWrap {
+    padding: 0 20px 20px;
+  }
+
+  .resumeFrame {
+    height: 65vh;
   }
 
   .storyModalHeader {

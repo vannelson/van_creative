@@ -4,6 +4,8 @@ export default function PortfolioNav({
   activeSection,
   navItems,
   navScrolled,
+  onOpenResume,
+  resumeLabel,
   scrollProgress,
 }) {
   return (
@@ -37,7 +39,9 @@ export default function PortfolioNav({
         </div>
 
         <div className={styles.navCta}>
-          <a href="#contact">Hire Me {"->"}</a>
+          <button onClick={onOpenResume} type="button">
+            {resumeLabel} {"->"}
+          </button>
         </div>
       </nav>
     </>

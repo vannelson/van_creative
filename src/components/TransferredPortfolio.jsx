@@ -18,6 +18,7 @@ import {
   navItems,
   projects,
   projectsContent,
+  resumePreviewContent,
   skillCategoryLabels,
   skills,
   storyModalContent,
@@ -31,6 +32,7 @@ import HeroSection from "@/features/portfolio/components/HeroSection";
 import Lightbox from "@/features/portfolio/components/Lightbox";
 import PortfolioNav from "@/features/portfolio/components/PortfolioNav";
 import ProjectsSection from "@/features/portfolio/components/ProjectsSection";
+import ResumeModal from "@/features/portfolio/components/ResumeModal";
 import StoryModal from "@/features/portfolio/components/StoryModal";
 import TechStackSection from "@/features/portfolio/components/TechStackSection";
 import useBodyScrollLock from "@/features/portfolio/hooks/useBodyScrollLock";
@@ -53,6 +55,7 @@ export default function TransferredPortfolio() {
   const [uploadedImages, setUploadedImages] = useState([]);
   const [lightbox, setLightbox] = useState(null);
   const [storyModalOpen, setStoryModalOpen] = useState(false);
+  const [resumeModalOpen, setResumeModalOpen] = useState(false);
 
   const filteredGallery = useMemo(() => {
     const items = [
@@ -76,7 +79,7 @@ export default function TransferredPortfolio() {
   const { statValues, statsRef } = useStatsCounter(heroStats);
   const { toastMessage, showToast } = useToast();
 
-  useBodyScrollLock(Boolean(lightbox || storyModalOpen));
+  useBodyScrollLock(Boolean(lightbox || storyModalOpen || resumeModalOpen));
   useRevealOnScroll(pageRef, `${activeSkillCat}:${filteredGallery.length}`);
   useParticleCanvas(canvasRef);
   useCursorFx(pageRef, cursorRef, ringRef);
@@ -165,6 +168,11 @@ export default function TransferredPortfolio() {
         isOpen={storyModalOpen}
         onClose={() => setStoryModalOpen(false)}
       />
+      <ResumeModal
+        content={resumePreviewContent}
+        isOpen={resumeModalOpen}
+        onClose={() => setResumeModalOpen(false)}
+      />
 
       <div
         className={`${styles.toast} ${toastMessage ? styles.toastVisible : ""}`}
@@ -176,12 +184,14 @@ export default function TransferredPortfolio() {
         activeSection={activeSection}
         navItems={navItems}
         navScrolled={navScrolled}
+        onOpenResume={() => setResumeModalOpen(true)}
+        resumeLabel={resumePreviewContent.triggerLabel}
         scrollProgress={scrollProgress}
       />
 
       <HeroSection
         content={heroContent}
-        onDownloadCv={() => showToast("CV download coming soon")}
+        onOpenResume={() => setResumeModalOpen(true)}
         orbitIcons={heroOrbitIcons}
         stats={heroStats}
         statValues={statValues}

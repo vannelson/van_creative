@@ -42,7 +42,15 @@ export default function TechStackSection({
               key={skill.name}
             >
               <div className={styles.skillIcon}>
-                <IconMark Icon={skill.Icon} className={styles.skillIconSvg} />
+                {skill.logo ? (
+                  <img
+                    alt={`${skill.name} logo`}
+                    className={styles.skillLogoImage}
+                    src={skill.logo}
+                  />
+                ) : (
+                  <IconMark Icon={skill.Icon} className={styles.skillIconSvg} />
+                )}
               </div>
               <div className={styles.skillName}>{skill.name}</div>
               <StarRating total={skill.stars} />

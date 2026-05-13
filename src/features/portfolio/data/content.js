@@ -57,6 +57,18 @@ export const heroContent = {
   titleTail: "WITH AI Productivity.",
   subtitle: ["Full-Stack Developer", "IT Specialist", "CRM Automation Expert"],
   imageSrc: "/van/vaHero.png",
+  resumeButtonLabel: "Preview CV",
+};
+
+export const resumePreviewContent = {
+  triggerLabel: "View My CV",
+  title: "Resume Preview",
+  description: "Preview the resume here, download a copy, or jump straight to contact.",
+  filePath: "/Van%20Nelson%20Creative%20Resume.pdf",
+  fileName: "Van Nelson Creative Resume.pdf",
+  downloadLabel: "Download CV",
+  contactLabel: "Contact Me",
+  openLabel: "Open in New Tab",
 };
 
 export const heroStats = [
@@ -88,7 +100,7 @@ export const aboutContent = {
 
 export const aboutCards = [
   { Icon: CodeRoundedIcon, title: "Full-Stack", subtitle: "Development" },
-  { Icon: SmartToyRoundedIcon, title: "AI & ML", subtitle: "Integration" },
+  { Icon: SmartToyRoundedIcon, title: "Automation", subtitle: "Workflow" },
   { Icon: SettingsSuggestRoundedIcon, title: "CRM", subtitle: "Automation" },
   { Icon: CloudQueueRoundedIcon, title: "Cloud", subtitle: "Architecture" },
 ];
@@ -167,38 +179,38 @@ export const skillCategoryLabels = {
 
 export const skills = {
   frontend: [
-    { name: "HTML / CSS", Icon: WebRoundedIcon, stars: 5 },
-    { name: "JavaScript", Icon: ApiRoundedIcon, stars: 5 },
-    { name: "TypeScript", Icon: SchemaRoundedIcon, stars: 4 },
-    { name: "Vue.js", Icon: ViewQuiltRoundedIcon, stars: 5 },
-    { name: "React", Icon: HubRoundedIcon, stars: 4 },
-    { name: "Quasar", Icon: DashboardCustomizeRoundedIcon, stars: 5 },
+    { name: "HTML / CSS", Icon: WebRoundedIcon, logo: "/skill-logos/html-css.svg", stars: 5 },
+    { name: "JavaScript", Icon: ApiRoundedIcon, logo: "/skill-logos/javascript.svg", stars: 5 },
+    { name: "TypeScript", Icon: SchemaRoundedIcon, logo: "/skill-logos/typescript.svg", stars: 4 },
+    { name: "Vue.js", Icon: ViewQuiltRoundedIcon, logo: "/skill-logos/vue.svg", stars: 5 },
+    { name: "React", Icon: HubRoundedIcon, logo: "/skill-logos/react.svg", stars: 4 },
+    { name: "Quasar", Icon: DashboardCustomizeRoundedIcon, logo: "/skill-logos/quasar.svg", stars: 5 },
   ],
   backend: [
-    { name: "PHP", Icon: TerminalRoundedIcon, stars: 5 },
-    { name: "Laravel", Icon: CodeRoundedIcon, stars: 5 },
-    { name: "Node.js", Icon: HubRoundedIcon, stars: 4 },
-    { name: "REST API", Icon: ApiRoundedIcon, stars: 5 },
+    { name: "PHP", Icon: TerminalRoundedIcon, logo: "/skill-logos/php.svg", stars: 5 },
+    { name: "Laravel", Icon: CodeRoundedIcon, logo: "/skill-logos/laravel.svg", stars: 5 },
+    { name: "Node.js", Icon: HubRoundedIcon, logo: "/skill-logos/nodejs.svg", stars: 4 },
+    { name: "REST API", Icon: ApiRoundedIcon, logo: "/skill-logos/rest-api.svg", stars: 5 },
   ],
   database: [
-    { name: "MySQL", Icon: StorageRoundedIcon, stars: 5 },
-    { name: "PostgreSQL", Icon: DnsRoundedIcon, stars: 4 },
-    { name: "Docker", Icon: Inventory2RoundedIcon, stars: 4 },
-    { name: "AWS", Icon: CloudQueueRoundedIcon, stars: 3 },
-    { name: "Azure", Icon: CloudQueueRoundedIcon, stars: 3 },
+    { name: "MySQL", Icon: StorageRoundedIcon, logo: "/skill-logos/mysql.svg", stars: 5 },
+    { name: "PostgreSQL", Icon: DnsRoundedIcon, logo: "/skill-logos/postgresql.svg", stars: 4 },
+    { name: "Docker", Icon: Inventory2RoundedIcon, logo: "/skill-logos/docker.svg", stars: 4 },
+    { name: "AWS", Icon: CloudQueueRoundedIcon, logo: "/skill-logos/aws.svg", stars: 3 },
+    { name: "Azure", Icon: CloudQueueRoundedIcon, logo: "/skill-logos/azure.svg", stars: 3 },
   ],
   ai: [
-    { name: "ChatGPT", Icon: SmartToyRoundedIcon, stars: 5 },
-    { name: "Claude", Icon: PsychologyAltRoundedIcon, stars: 5 },
-    { name: "Codex", Icon: MemoryRoundedIcon, stars: 5 },
-    { name: "Prompt Systems", Icon: EditNoteRoundedIcon, stars: 5 },
+    { name: "ChatGPT", Icon: SmartToyRoundedIcon, logo: "/skill-logos/openai.svg", stars: 5 },
+    { name: "Claude", Icon: PsychologyAltRoundedIcon, logo: "/skill-logos/claude.svg", stars: 5 },
+    { name: "Codex", Icon: MemoryRoundedIcon, logo: "/skill-logos/openai.svg", stars: 5 },
+    { name: "Prompt Systems", Icon: EditNoteRoundedIcon, logo: "/skill-logos/openai.svg", stars: 5 },
   ],
   crm: [
-    { name: "GoHighLevel", Icon: RocketLaunchRoundedIcon, stars: 5 },
-    { name: "Zapier", Icon: BoltRoundedIcon, stars: 5 },
-    { name: "Power Automate", Icon: SyncRoundedIcon, stars: 5 },
-    { name: "Power Apps", Icon: WidgetsRoundedIcon, stars: 4 },
-    { name: "API Integration", Icon: LinkRoundedIcon, stars: 5 },
+    { name: "GoHighLevel", Icon: RocketLaunchRoundedIcon, logo: "/skill-logos/gohighlevel.svg", stars: 5 },
+    { name: "Zapier", Icon: BoltRoundedIcon, logo: "/skill-logos/zapier.svg", stars: 5 },
+    { name: "Power Automate", Icon: SyncRoundedIcon, logo: "/skill-logos/power-automate.svg", stars: 5 },
+    { name: "Power Apps", Icon: WidgetsRoundedIcon, logo: "/skill-logos/power-apps.svg", stars: 4 },
+    { name: "API Integration", Icon: LinkRoundedIcon, logo: "/skill-logos/api-integration.svg", stars: 5 },
   ],
 };
 

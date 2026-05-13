@@ -4,7 +4,7 @@ import IconMark from "./IconMark";
 export default function HeroSection({
   content,
   orbitIcons,
-  onDownloadCv,
+  onOpenResume,
   stats,
   statValues,
   statsRef,
@@ -31,8 +31,8 @@ export default function HeroSection({
           <a className={styles.btnOutline} href="#contact">
             Contact Me
           </a>
-          <button className={styles.btnGhost} onClick={onDownloadCv} type="button">
-            Download CV
+          <button className={styles.btnGhost} onClick={onOpenResume} type="button">
+            {content.resumeButtonLabel}
           </button>
         </div>
         <div className={styles.heroStats} ref={statsRef}>
