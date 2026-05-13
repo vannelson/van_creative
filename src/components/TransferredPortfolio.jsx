@@ -1,5 +1,53 @@
 "use client";
 
+import AccountTreeRoundedIcon from "@mui/icons-material/AccountTreeRounded";
+import AddPhotoAlternateRoundedIcon from "@mui/icons-material/AddPhotoAlternateRounded";
+import ApiRoundedIcon from "@mui/icons-material/ApiRounded";
+import BoltRoundedIcon from "@mui/icons-material/BoltRounded";
+import BusinessRoundedIcon from "@mui/icons-material/BusinessRounded";
+import CalendarMonthRoundedIcon from "@mui/icons-material/CalendarMonthRounded";
+import CloudQueueRoundedIcon from "@mui/icons-material/CloudQueueRounded";
+import CodeRoundedIcon from "@mui/icons-material/CodeRounded";
+import DataObjectRoundedIcon from "@mui/icons-material/DataObjectRounded";
+import DashboardCustomizeRoundedIcon from "@mui/icons-material/DashboardCustomizeRounded";
+import DesktopWindowsRoundedIcon from "@mui/icons-material/DesktopWindowsRounded";
+import DnsRoundedIcon from "@mui/icons-material/DnsRounded";
+import EditNoteRoundedIcon from "@mui/icons-material/EditNoteRounded";
+import EmojiEventsRoundedIcon from "@mui/icons-material/EmojiEventsRounded";
+import EngineeringRoundedIcon from "@mui/icons-material/EngineeringRounded";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import GroupsRoundedIcon from "@mui/icons-material/GroupsRounded";
+import HubRoundedIcon from "@mui/icons-material/HubRounded";
+import InsightsRoundedIcon from "@mui/icons-material/InsightsRounded";
+import Inventory2RoundedIcon from "@mui/icons-material/Inventory2Rounded";
+import LanguageRoundedIcon from "@mui/icons-material/LanguageRounded";
+import LaptopMacRoundedIcon from "@mui/icons-material/LaptopMacRounded";
+import LightbulbRoundedIcon from "@mui/icons-material/LightbulbRounded";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import LinkRoundedIcon from "@mui/icons-material/LinkRounded";
+import MailOutlineRoundedIcon from "@mui/icons-material/MailOutlineRounded";
+import MemoryRoundedIcon from "@mui/icons-material/MemoryRounded";
+import MicRoundedIcon from "@mui/icons-material/MicRounded";
+import PhotoCameraRoundedIcon from "@mui/icons-material/PhotoCameraRounded";
+import PsychologyAltRoundedIcon from "@mui/icons-material/PsychologyAltRounded";
+import RocketLaunchRoundedIcon from "@mui/icons-material/RocketLaunchRounded";
+import SchemaRoundedIcon from "@mui/icons-material/SchemaRounded";
+import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
+import SendRoundedIcon from "@mui/icons-material/SendRounded";
+import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
+import SettingsSuggestRoundedIcon from "@mui/icons-material/SettingsSuggestRounded";
+import SmartToyRoundedIcon from "@mui/icons-material/SmartToyRounded";
+import SpaceDashboardRoundedIcon from "@mui/icons-material/SpaceDashboardRounded";
+import StarBorderRoundedIcon from "@mui/icons-material/StarBorderRounded";
+import StarRoundedIcon from "@mui/icons-material/StarRounded";
+import StorageRoundedIcon from "@mui/icons-material/StorageRounded";
+import SyncRoundedIcon from "@mui/icons-material/SyncRounded";
+import TerminalRoundedIcon from "@mui/icons-material/TerminalRounded";
+import TrackChangesRoundedIcon from "@mui/icons-material/TrackChangesRounded";
+import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
+import WebRoundedIcon from "@mui/icons-material/WebRounded";
+import WidgetsRoundedIcon from "@mui/icons-material/WidgetsRounded";
+import WorkspacePremiumRoundedIcon from "@mui/icons-material/WorkspacePremiumRounded";
 import { useEffect, useMemo, useRef, useState } from "react";
 import styles from "./TransferredPortfolio.module.css";
 
@@ -20,11 +68,41 @@ const heroStats = [
   { label: "Happy Clients", count: 30 },
 ];
 
+const aboutSummary = [
+  "This experience is built around a full-stack developer who started with traditional software development - writing code from frontend to backend, solving real business problems, and building systems with standard engineering practices.",
+  "Over time, the focus evolved beyond coding into architecture, productivity, and smarter execution - using AI not to replace engineering, but to speed up development, improve quality, and deliver scalable solutions faster.",
+  "Today, the approach combines full-stack development, system design, automation, cloud thinking, and AI-driven workflows - building smart systems with standard practices that are efficient, secure, and built to last.",
+];
+
+const longStoryParagraphs = [
+  "I'm a full-stack developer - writing code from top to bottom, spending hours building features that already exist in my head, debugging syntax errors, and searching Stack Overflow and blogs just to fix one issue.",
+  "Since I graduated in 2017, up until 2020, I worked on different projects and jobs, constantly learning, coding, and improving.",
+  "My first corporate job was at EPI-Phil - doing what every developer knows: coding, debugging, and yes, sometimes suffering. But it worked.",
+  "Then I got my second job at inriver, and that was when AI started booming.",
+  "At first, we were all in denial. We told ourselves we were hard-core coders and did not need AI. Honestly, I think some programmers had pride. Some were quietly using ChatGPT in the background, then acting like it was all their code.",
+  "That was when I thought: Why not use AI for productivity and focus my energy on architecture?",
+  "Then I got my third corporate job as a senior developer. At first, I told myself I would do it the old way and code everything on my own. But behind the scenes, I was using OpenAI Codex to move faster while I focused on architecture, system design, testing, deployment, and code reviews.",
+  "I'm not doing 100% of the coding anymore - maybe only 20%. Before, something that took me two weeks to finish now takes me one day. Clean frontend. Testing. Deployment. PR review.",
+  "That approach worked for 1 year and 6 months. I kept that secret until one morning during a meeting when I introduced AI to the team.",
+  "Some people asked me: Yes, it works, but can it replace us? Then boom - politics happened.",
+  "That was when I fully committed to productivity with AI, building systems faster, more securely, and with best practices as a full-stack developer.",
+  "And it worked. I landed a project-based client in Singapore, where I designed and implemented a complete system in just two months using standard practices, solid architecture, UI collaboration, and AI-assisted productivity.",
+  "I even got the chance to visit Singapore for installation and training. And the best part? That system is still running today.",
+];
+
 const aboutCards = [
-  { icon: "🚀", title: "Full-Stack", subtitle: "Development" },
-  { icon: "🤖", title: "AI & ML", subtitle: "Integration" },
-  { icon: "⚙️", title: "CRM", subtitle: "Automation" },
-  { icon: "☁️", title: "Cloud", subtitle: "Architecture" },
+  { Icon: CodeRoundedIcon, title: "Full-Stack", subtitle: "Development" },
+  { Icon: SmartToyRoundedIcon, title: "AI & ML", subtitle: "Integration" },
+  { Icon: SettingsSuggestRoundedIcon, title: "CRM", subtitle: "Automation" },
+  { Icon: CloudQueueRoundedIcon, title: "Cloud", subtitle: "Architecture" },
+];
+
+const heroOrbitIcons = [
+  SmartToyRoundedIcon,
+  BoltRoundedIcon,
+  PsychologyAltRoundedIcon,
+  TerminalRoundedIcon,
+  LinkRoundedIcon,
 ];
 
 const timelineItems = [
@@ -56,65 +134,65 @@ const timelineItems = [
 
 const skills = {
   frontend: [
-    { name: "HTML / CSS", icon: "🎨", stars: 5 },
-    { name: "JavaScript", icon: "⚡", stars: 5 },
-    { name: "TypeScript", icon: "🔷", stars: 4 },
-    { name: "Vue.js", icon: "💚", stars: 5 },
-    { name: "React", icon: "⚛️", stars: 4 },
-    { name: "Quasar", icon: "🦋", stars: 5 },
+    { name: "HTML / CSS", Icon: WebRoundedIcon, stars: 5 },
+    { name: "JavaScript", Icon: DataObjectRoundedIcon, stars: 5 },
+    { name: "TypeScript", Icon: SchemaRoundedIcon, stars: 4 },
+    { name: "Vue.js", Icon: ViewQuiltRoundedIcon, stars: 5 },
+    { name: "React", Icon: HubRoundedIcon, stars: 4 },
+    { name: "Quasar", Icon: DashboardCustomizeRoundedIcon, stars: 5 },
   ],
   backend: [
-    { name: "PHP", icon: "🐘", stars: 5 },
-    { name: "Laravel", icon: "🔴", stars: 5 },
-    { name: "Node.js", icon: "💚", stars: 4 },
-    { name: "REST API", icon: "🔗", stars: 5 },
+    { name: "PHP", Icon: TerminalRoundedIcon, stars: 5 },
+    { name: "Laravel", Icon: CodeRoundedIcon, stars: 5 },
+    { name: "Node.js", Icon: HubRoundedIcon, stars: 4 },
+    { name: "REST API", Icon: ApiRoundedIcon, stars: 5 },
   ],
   database: [
-    { name: "MySQL", icon: "🗄️", stars: 5 },
-    { name: "PostgreSQL", icon: "🐘", stars: 4 },
-    { name: "Docker", icon: "🐳", stars: 4 },
-    { name: "AWS", icon: "☁️", stars: 3 },
-    { name: "Azure", icon: "🔵", stars: 3 },
+    { name: "MySQL", Icon: StorageRoundedIcon, stars: 5 },
+    { name: "PostgreSQL", Icon: DnsRoundedIcon, stars: 4 },
+    { name: "Docker", Icon: Inventory2RoundedIcon, stars: 4 },
+    { name: "AWS", Icon: CloudQueueRoundedIcon, stars: 3 },
+    { name: "Azure", Icon: CloudQueueRoundedIcon, stars: 3 },
   ],
   ai: [
-    { name: "ChatGPT", icon: "🤖", stars: 5 },
-    { name: "Claude", icon: "🧠", stars: 5 },
-    { name: "Codex", icon: "💻", stars: 5 },
-    { name: "Prompt Systems", icon: "✍️", stars: 5 },
+    { name: "ChatGPT", Icon: SmartToyRoundedIcon, stars: 5 },
+    { name: "Claude", Icon: PsychologyAltRoundedIcon, stars: 5 },
+    { name: "Codex", Icon: MemoryRoundedIcon, stars: 5 },
+    { name: "Prompt Systems", Icon: EditNoteRoundedIcon, stars: 5 },
   ],
   crm: [
-    { name: "GoHighLevel", icon: "🚀", stars: 5 },
-    { name: "Zapier", icon: "⚡", stars: 5 },
-    { name: "Power Automate", icon: "🔁", stars: 5 },
-    { name: "Power Apps", icon: "📱", stars: 4 },
-    { name: "API Integration", icon: "🔗", stars: 5 },
+    { name: "GoHighLevel", Icon: RocketLaunchRoundedIcon, stars: 5 },
+    { name: "Zapier", Icon: BoltRoundedIcon, stars: 5 },
+    { name: "Power Automate", Icon: SyncRoundedIcon, stars: 5 },
+    { name: "Power Apps", Icon: WidgetsRoundedIcon, stars: 4 },
+    { name: "API Integration", Icon: LinkRoundedIcon, stars: 5 },
   ],
 };
 
 const projects = [
   {
-    icon: "🏢",
+    Icon: BusinessRoundedIcon,
     category: "Enterprise Systems",
     title: "Enterprise Resource Management Suite",
     desc: "A comprehensive operations platform covering inventory, HR, reporting, and analytics for a high-volume organization with AI-assisted forecasting and live dashboards.",
     tags: ["Laravel", "Vue.js", "MySQL", "Docker"],
   },
   {
-    icon: "🤖",
+    Icon: SmartToyRoundedIcon,
     category: "AI Application",
     title: "AI-Powered Support Automation",
     desc: "An intelligent support workflow that combines large language models with CRM actions to reduce response time and automate repetitive service tasks.",
     tags: ["LLM API", "Node.js", "GoHighLevel", "Zapier"],
   },
   {
-    icon: "📊",
+    Icon: InsightsRoundedIcon,
     category: "CRM System",
     title: "Sales Pipeline Automation CRM",
     desc: "A sales orchestration system with lead scoring, follow-up automation, and custom API hooks designed to improve conversion and visibility across the funnel.",
     tags: ["GoHighLevel", "Power Automate", "REST API"],
   },
   {
-    icon: "⚡",
+    Icon: SpaceDashboardRoundedIcon,
     category: "SaaS Platform",
     title: "Multi-Tenant SaaS Dashboard",
     desc: "A white-label business dashboard with multi-tenant permissions, real-time analytics, and scalable infrastructure for recurring subscription clients.",
@@ -123,20 +201,20 @@ const projects = [
 ];
 
 const defaultGallery = [
-  { emoji: "💻", label: "Workspace", filter: "workspace", tall: true },
-  { emoji: "🤝", label: "Client Meeting", filter: "meetings", tall: false },
-  { emoji: "👥", label: "Team Collab", filter: "team", tall: false },
-  { emoji: "🏆", label: "Certification", filter: "certs", tall: true },
-  { emoji: "🎤", label: "Tech Event", filter: "events", tall: false },
-  { emoji: "🖥️", label: "Workspace Setup", filter: "workspace", tall: false },
-  { emoji: "📜", label: "Achievement", filter: "certs", tall: false },
-  { emoji: "🎯", label: "Strategy Session", filter: "meetings", tall: true },
-  { emoji: "🔧", label: "Behind The Scenes", filter: "team", tall: false },
+  { Icon: LaptopMacRoundedIcon, label: "Workspace", filter: "workspace", tall: true },
+  { Icon: GroupsRoundedIcon, label: "Client Meeting", filter: "meetings", tall: false },
+  { Icon: GroupsRoundedIcon, label: "Team Collab", filter: "team", tall: false },
+  { Icon: WorkspacePremiumRoundedIcon, label: "Certification", filter: "certs", tall: true },
+  { Icon: MicRoundedIcon, label: "Tech Event", filter: "events", tall: false },
+  { Icon: DesktopWindowsRoundedIcon, label: "Workspace Setup", filter: "workspace", tall: false },
+  { Icon: EmojiEventsRoundedIcon, label: "Achievement", filter: "certs", tall: false },
+  { Icon: TrackChangesRoundedIcon, label: "Strategy Session", filter: "meetings", tall: true },
+  { Icon: EngineeringRoundedIcon, label: "Behind The Scenes", filter: "team", tall: false },
 ];
 
 const experiences = [
   {
-    icon: "🧠",
+    Icon: PsychologyAltRoundedIcon,
     title: "AI Consultant & IT Specialist",
     company: "Independent Practice",
     desc: "Leading AI integration projects, CRM automation, and full-stack solution delivery for organizations looking to modernize operations.",
@@ -144,21 +222,21 @@ const experiences = [
     current: true,
   },
   {
-    icon: "🏗️",
+    Icon: AccountTreeRoundedIcon,
     title: "Full-Stack Developer",
     company: "Technology Solutions Studio",
     desc: "Architected SaaS platforms, APIs, and multi-tenant systems using Laravel, Vue.js, and cloud infrastructure.",
     period: "2020 - 2022",
   },
   {
-    icon: "⚙️",
+    Icon: SettingsRoundedIcon,
     title: "Mid-Level Web Developer",
     company: "Digital Product Agency",
     desc: "Delivered enterprise web applications and guided junior developers across CMS and commerce-focused builds.",
     period: "2018 - 2020",
   },
   {
-    icon: "💡",
+    Icon: LightbulbRoundedIcon,
     title: "Junior Web Developer",
     company: "Startup Team",
     desc: "Built responsive interfaces and back-end features using PHP, MySQL, and vanilla JavaScript in a fast-moving startup setting.",
@@ -168,28 +246,41 @@ const experiences = [
 
 const contactLinks = [
   {
-    icon: "✉️",
+    Icon: MailOutlineRoundedIcon,
     type: "Email",
     value: "hello@signalstudio.dev",
     href: "mailto:hello@signalstudio.dev",
   },
   {
-    icon: "💼",
+    Icon: LinkedInIcon,
     type: "LinkedIn",
     value: "linkedin.com/in/signalstudio",
     href: "https://linkedin.com",
   },
   {
-    icon: "🐙",
+    Icon: GitHubIcon,
     type: "GitHub",
     value: "github.com/signalstudio",
     href: "https://github.com",
   },
-  { icon: "🌐", type: "Portfolio", value: "signalstudio.dev", href: "#" },
+  {
+    Icon: LanguageRoundedIcon,
+    type: "Portfolio",
+    value: "signalstudio.dev",
+    href: "#",
+  },
 ];
 
 function renderStars(total) {
   return Array.from({ length: 5 }, (_, index) => index < total);
+}
+
+function IconMark({ Icon, className }) {
+  if (!Icon) {
+    return null;
+  }
+
+  return <Icon className={className} />;
 }
 
 export default function TransferredPortfolio() {
@@ -204,11 +295,13 @@ export default function TransferredPortfolio() {
   const [activeGalleryFilter, setActiveGalleryFilter] = useState("all");
   const [uploadedImages, setUploadedImages] = useState([]);
   const [lightbox, setLightbox] = useState(null);
+  const [storyModalOpen, setStoryModalOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState("");
   const [activeSection, setActiveSection] = useState("home");
   const [scrollProgress, setScrollProgress] = useState(0);
   const [navScrolled, setNavScrolled] = useState(false);
   const [statValues, setStatValues] = useState(heroStats.map(() => 0));
+  const LightboxIcon = lightbox?.Icon || PhotoCameraRoundedIcon;
 
   const filteredGallery = useMemo(() => {
     const items = [
@@ -235,6 +328,18 @@ export default function TransferredPortfolio() {
       }
     };
   }, []);
+
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+
+    if (lightbox || storyModalOpen) {
+      document.body.style.overflow = "hidden";
+    }
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [lightbox, storyModalOpen]);
 
   useEffect(() => {
     const root = pageRef.current;
@@ -538,9 +643,45 @@ export default function TransferredPortfolio() {
               />
             ) : (
               <div className={styles.lightboxEmoji}>
-                {lightbox?.content || "📷"}
+                <IconMark Icon={LightboxIcon} className={styles.lightboxIconSvg} />
               </div>
             )}
+          </div>
+        </div>
+      </div>
+
+      <div
+        className={`${styles.storyModalBackdrop} ${storyModalOpen ? styles.storyModalBackdropOpen : ""}`}
+        onClick={() => setStoryModalOpen(false)}
+      >
+        <div
+          className={styles.storyModal}
+          onClick={(event) => event.stopPropagation()}
+        >
+          <div className={styles.storyModalHeader}>
+            <div>
+              <div className={styles.storyModalKicker}>The real journey</div>
+              <h3>From full-stack coding to AI-powered productivity</h3>
+            </div>
+            <button
+              className={styles.storyModalClose}
+              onClick={() => setStoryModalOpen(false)}
+              type="button"
+            >
+              x
+            </button>
+          </div>
+
+          <div className={styles.storyModalBody}>
+            <div className={styles.storyNarrative}>
+              <div className={styles.storyPullQuote}>
+                "Why not use AI for productivity and focus my energy on architecture?"
+              </div>
+
+              {longStoryParagraphs.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -635,9 +776,9 @@ export default function TransferredPortfolio() {
                 src="/van/vaHero.png"
               />
             </div>
-            {["🤖", "⚡", "🧠", "💻", "🔗"].map((icon) => (
-              <div className={styles.floatIcon} key={icon}>
-                {icon}
+            {heroOrbitIcons.map((Icon, index) => (
+              <div className={styles.floatIcon} key={`orbit-${index}`}>
+                <IconMark Icon={Icon} className={styles.floatIconSvg} />
               </div>
             ))}
           </div>
@@ -652,30 +793,29 @@ export default function TransferredPortfolio() {
           <div className={styles.aboutGrid} data-reveal="">
             <div className={styles.aboutText}>
               <h2 className={styles.sectionTitle}>
-                AI-Powered{" "}
-                <span className={styles.goldText}>IT Specialist</span> &
-                Developer
+                Full-Stack Developer,{" "}
+                <span className={styles.goldText}>Standard Practices</span> &
+                AI Productivity
               </h2>
-              <p>
-                This experience is built around a generic but high-capability
-                profile focused on intelligent systems, scalable software, and
-                modern automation.
-              </p>
-              <p>
-                The positioning combines full-stack development, CRM
-                orchestration, cloud thinking, and AI workflow design into one
-                cohesive technical brand.
-              </p>
-              <p>
-                The goal is to present a portfolio structure that feels premium,
-                deliberate, and conversion-oriented without relying on personal
-                information from the previous site.
-              </p>
+              {aboutSummary.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+              <div className={styles.aboutActions}>
+                <button
+                  className={styles.aboutStoryButton}
+                  onClick={() => setStoryModalOpen(true)}
+                  type="button"
+                >
+                  Want to hear more?
+                </button>
+              </div>
             </div>
             <div className={styles.aboutCards}>
               {aboutCards.map((card) => (
                 <div className={styles.glassMini} key={card.title}>
-                  <div className={styles.glassMiniIcon}>{card.icon}</div>
+                  <div className={styles.glassMiniIcon}>
+                    <IconMark Icon={card.Icon} className={styles.glassMiniIconSvg} />
+                  </div>
                   <h4>{card.title}</h4>
                   <p>{card.subtitle}</p>
                 </div>
@@ -755,16 +895,17 @@ export default function TransferredPortfolio() {
                 data-reveal=""
                 key={skill.name}
               >
-                <div className={styles.skillIcon}>{skill.icon}</div>
+                <div className={styles.skillIcon}>
+                  <IconMark Icon={skill.Icon} className={styles.skillIconSvg} />
+                </div>
                 <div className={styles.skillName}>{skill.name}</div>
                 <div className={styles.stars}>
                   {renderStars(skill.stars).map((filled, index) => (
-                    <span
-                      className={`${styles.star} ${filled ? styles.starFilled : styles.starEmpty}`}
+                    <IconMark
+                      Icon={filled ? StarRoundedIcon : StarBorderRoundedIcon}
+                      className={`${styles.starIcon} ${filled ? styles.starFilled : styles.starEmpty}`}
                       key={`${skill.name}-${index}`}
-                    >
-                      {filled ? "★" : "☆"}
-                    </span>
+                    />
                   ))}
                 </div>
               </div>
@@ -794,7 +935,9 @@ export default function TransferredPortfolio() {
                 data-reveal=""
                 key={project.title}
               >
-                <div className={styles.projectImage}>{project.icon}</div>
+                <div className={styles.projectImage}>
+                  <IconMark Icon={project.Icon} className={styles.projectIconSvg} />
+                </div>
                 <div className={styles.projectInfo}>
                   <div className={styles.projectCategory}>
                     {project.category}
@@ -849,7 +992,12 @@ export default function TransferredPortfolio() {
           </div>
 
           <label className={styles.galleryUploadZone} htmlFor="galleryUpload">
-            <div className={styles.uploadIcon}>📸</div>
+            <div className={styles.uploadIcon}>
+              <IconMark
+                Icon={AddPhotoAlternateRoundedIcon}
+                className={styles.uploadIconSvg}
+              />
+            </div>
             <p>
               Drop your images here or <span>click to browse</span>
             </p>
@@ -872,7 +1020,8 @@ export default function TransferredPortfolio() {
                 key={`${item.label}-${index}`}
                 onClick={() =>
                   setLightbox({
-                    content: item.src || item.emoji,
+                    content: item.src,
+                    Icon: item.Icon,
                     isImage: Boolean(item.src),
                     label: item.label,
                   })
@@ -884,11 +1033,11 @@ export default function TransferredPortfolio() {
                   <div
                     className={`${styles.masonryEmoji} ${item.tall ? styles.masonryEmojiTall : ""}`}
                   >
-                    {item.emoji}
+                    <IconMark Icon={item.Icon} className={styles.masonryIconSvg} />
                   </div>
                 )}
                 <div className={styles.masonryOverlay}>
-                  <span>🔍</span>
+                  <IconMark Icon={SearchRoundedIcon} className={styles.overlayIconSvg} />
                   <span>{item.label}</span>
                 </div>
               </div>
@@ -917,7 +1066,9 @@ export default function TransferredPortfolio() {
                 data-reveal=""
                 key={experience.title}
               >
-                <div className={styles.experienceLogo}>{experience.icon}</div>
+                <div className={styles.experienceLogo}>
+                  <IconMark Icon={experience.Icon} className={styles.experienceIconSvg} />
+                </div>
                 <div className={styles.experienceInfo}>
                   <h3>{experience.title}</h3>
                   <div className={styles.experienceCompany}>
@@ -961,7 +1112,9 @@ export default function TransferredPortfolio() {
                     target={link.href.startsWith("http") ? "_blank" : undefined}
                     rel="noreferrer"
                   >
-                    <div className={styles.linkIcon}>{link.icon}</div>
+                    <div className={styles.linkIcon}>
+                      <IconMark Icon={link.Icon} className={styles.linkIconSvg} />
+                    </div>
                     <div className={styles.linkInfo}>
                       <div className={styles.linkType}>{link.type}</div>
                       <div className={styles.linkValue}>{link.value}</div>
@@ -976,7 +1129,11 @@ export default function TransferredPortfolio() {
                 onClick={() => showToast("Scheduling link coming soon")}
                 type="button"
               >
-                📅 Schedule a Meeting
+                <IconMark
+                  Icon={CalendarMonthRoundedIcon}
+                  className={styles.buttonIcon}
+                />
+                Schedule a Meeting
               </button>
             </div>
 
@@ -1017,7 +1174,8 @@ export default function TransferredPortfolio() {
               </div>
 
               <button className={styles.btnPrimary} type="submit">
-                Send Message ⚡
+                Send Message
+                <IconMark Icon={SendRoundedIcon} className={styles.buttonIcon} />
               </button>
             </form>
           </div>

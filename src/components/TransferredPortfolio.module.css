@@ -451,9 +451,15 @@
   align-items: center;
   justify-content: center;
   font-size: 22px;
+  color: var(--gold);
   backdrop-filter: blur(10px);
   animation: floatIcon 4s ease-in-out infinite;
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+}
+
+.floatIconSvg {
+  font-size: 24px !important;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
 }
 
 .floatIcon:nth-of-type(4) {
@@ -574,6 +580,32 @@
   line-height: 1.8;
 }
 
+.aboutActions {
+  margin-top: 28px;
+}
+
+.aboutStoryButton {
+  background: rgba(255, 215, 0, 0.08);
+  color: var(--gold);
+  border: 1px solid rgba(255, 215, 0, 0.28);
+  padding: 13px 24px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 16px rgba(255, 215, 0, 0.08);
+}
+
+.aboutStoryButton:hover {
+  background: rgba(255, 215, 0, 0.14);
+  border-color: rgba(255, 215, 0, 0.45);
+  box-shadow: 0 0 24px rgba(255, 215, 0, 0.16);
+  transform: translateY(-2px);
+}
+
 .aboutCards {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -597,8 +629,16 @@
 }
 
 .glassMiniIcon {
-  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 8px;
+}
+
+.glassMiniIconSvg {
+  font-size: 30px !important;
+  color: var(--gold);
+  filter: drop-shadow(0 0 14px rgba(255, 215, 0, 0.2));
 }
 
 .glassMini h4 {
@@ -765,8 +805,16 @@
 }
 
 .skillIcon {
-  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 10px;
+}
+
+.skillIconSvg {
+  font-size: 34px !important;
+  color: var(--gold);
+  filter: drop-shadow(0 0 16px rgba(255, 215, 0, 0.2));
 }
 
 .skillName {
@@ -782,8 +830,8 @@
   gap: 3px;
 }
 
-.star {
-  font-size: 12px;
+.starIcon {
+  font-size: 16px !important;
 }
 
 .starFilled {
@@ -835,6 +883,12 @@
   font-size: 64px;
   position: relative;
   overflow: hidden;
+}
+
+.projectIconSvg {
+  font-size: 78px !important;
+  color: rgba(255, 245, 204, 0.96);
+  filter: drop-shadow(0 0 26px rgba(255, 215, 0, 0.22));
 }
 
 .projectImage::after {
@@ -912,8 +966,15 @@
 }
 
 .uploadIcon {
-  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 10px;
+}
+
+.uploadIconSvg {
+  font-size: 42px !important;
+  color: var(--gold);
 }
 
 .galleryUploadZone p {
@@ -960,13 +1021,25 @@
 
 .masonryEmoji {
   width: 100%;
-  font-size: 48px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 30px 20px;
 }
 
 .masonryEmojiTall {
   padding: 50px 20px;
+}
+
+.masonryIconSvg {
+  font-size: 52px !important;
+  color: rgba(255, 245, 204, 0.95);
+  filter: drop-shadow(0 0 22px rgba(255, 215, 0, 0.18));
+}
+
+.overlayIconSvg {
+  font-size: 22px !important;
+  color: var(--gold);
 }
 
 .masonryOverlay {
@@ -1021,7 +1094,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 26px;
+}
+
+.experienceIconSvg {
+  font-size: 28px !important;
+  color: var(--gold);
 }
 
 .experienceInfo h3 {
@@ -1102,9 +1179,17 @@
 }
 
 .linkIcon {
-  font-size: 22px;
   width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+}
+
+.linkIconSvg {
+  font-size: 22px !important;
+  color: var(--gold);
 }
 
 .linkInfo {
@@ -1215,6 +1300,10 @@
   justify-content: center;
 }
 
+.buttonIcon {
+  font-size: 20px !important;
+}
+
 .scheduleButton:hover {
   background: rgba(139, 92, 246, 0.2);
   box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
@@ -1273,6 +1362,105 @@
   transition: all 0.1s ease;
 }
 
+.storyModalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9050;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: rgba(3, 6, 14, 0.82);
+  backdrop-filter: blur(18px);
+}
+
+.storyModalBackdropOpen {
+  display: flex;
+}
+
+.storyModal {
+  width: min(1180px, 100%);
+  max-height: calc(100vh - 56px);
+  background: linear-gradient(180deg, rgba(10, 15, 30, 0.98), rgba(13, 21, 41, 0.98));
+  border: 1px solid rgba(255, 215, 0, 0.18);
+  border-radius: 20px;
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(255, 215, 0, 0.04);
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.storyModalHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 32px 24px;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.08);
+  background: linear-gradient(180deg, rgba(255, 215, 0, 0.04), transparent);
+}
+
+.storyModalHeader h3 {
+  font-family: var(--font-bebas-neue), cursive;
+  font-size: clamp(28px, 3vw, 44px);
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.storyModalKicker {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.storyModalClose {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid rgba(255, 215, 0, 0.22);
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.storyModalClose:hover {
+  background: rgba(255, 215, 0, 0.08);
+  border-color: rgba(255, 215, 0, 0.4);
+}
+
+.storyModalBody {
+  display: block;
+  padding: 28px 32px 32px;
+  overflow: auto;
+}
+
+.storyNarrative p {
+  color: var(--text-dim);
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  max-width: 980px;
+}
+
+.storyPullQuote {
+  margin-bottom: 24px;
+  padding: 20px 22px;
+  border-left: 3px solid var(--gold);
+  border-radius: 0 14px 14px 0;
+  background: linear-gradient(90deg, rgba(255, 215, 0, 0.08), rgba(255, 215, 0, 0.02));
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 600;
+  max-width: 980px;
+}
+
 .lightbox {
   position: fixed;
   inset: 0;
@@ -1313,8 +1501,16 @@
 }
 
 .lightboxEmoji {
-  font-size: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 60px;
+}
+
+.lightboxIconSvg {
+  font-size: 100px !important;
+  color: var(--gold);
+  filter: drop-shadow(0 0 32px rgba(255, 215, 0, 0.24));
 }
 
 .toast {
@@ -1415,6 +1611,10 @@
     padding: 70px 30px;
   }
 
+  .storyModalBackdrop {
+    padding: 18px;
+  }
+
   .navbar {
     padding: 0 20px;
     height: 56px;
@@ -1453,6 +1653,18 @@
 @media (max-width: 600px) {
   .navCta {
     display: none;
+  }
+
+  .storyModalHeader {
+    padding: 22px 20px 18px;
+  }
+
+  .storyModalBody {
+    padding: 20px;
+  }
+
+  .storyNarrative p {
+    font-size: 17px;
   }
 
   .masonry {
