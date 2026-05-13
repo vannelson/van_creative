@@ -849,6 +849,14 @@
   gap: 24px;
 }
 
+.experienceTimelineHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 860px;
+}
+
 .projectCard {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1096,6 +1104,27 @@
   justify-content: center;
 }
 
+.experienceTimelineIcon {
+  width: 124px;
+  min-height: 58px;
+  flex: 0 0 auto;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(255, 215, 0, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  box-shadow: 0 0 22px rgba(255, 215, 0, 0.08);
+}
+
+.experienceLogoImage {
+  width: 100%;
+  max-height: 42px;
+  object-fit: contain;
+  display: block;
+}
+
 .experienceIconSvg {
   font-size: 28px !important;
   color: var(--gold);
@@ -1118,6 +1147,7 @@
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
 .experiencePeriod {
@@ -1138,6 +1168,43 @@
   color: var(--gold);
   font-size: 10px;
   letter-spacing: 2px;
+}
+
+.experienceHighlights {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: grid;
+  gap: 12px;
+  max-width: 820px;
+}
+
+.experienceHighlights li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--text-dim);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.experienceHighlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.45);
+}
+
+.experienceTagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 18px;
 }
 
 .contactSection {

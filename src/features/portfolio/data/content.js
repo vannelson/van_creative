@@ -38,15 +38,15 @@ import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
 import WebRoundedIcon from "@mui/icons-material/WebRounded";
 import WidgetsRoundedIcon from "@mui/icons-material/WidgetsRounded";
 import WorkspacePremiumRoundedIcon from "@mui/icons-material/WorkspacePremiumRounded";
+import siteData from "@/data/siteData.json";
 
 export const navItems = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
-  { id: "story", label: "My Story" },
-  { id: "techstack", label: "Stack" },
-  { id: "projects", label: "Projects" },
-  { id: "gallery", label: "Gallery" },
   { id: "experience", label: "Experience" },
+  { id: "projects", label: "Projects" },
+  { id: "techstack", label: "Stack" },
+  { id: "gallery", label: "Gallery" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -98,7 +98,7 @@ export const storyContent = {
   title: "My",
   titleAccent: "Story",
   description:
-    "A path shaped by curiosity, code, and a steady move toward automation, systems thinking, and AI-assisted delivery.",
+    "A career shaped by internal systems, ETL workflows, CRM platforms, manufacturing automation, and AI-assisted delivery.",
 };
 
 export const storyModalContent = {
@@ -124,28 +124,28 @@ export const storyModalContent = {
 
 export const timelineItems = [
   {
-    year: "2016 - 2018",
-    title: "Junior Developer",
-    desc: "Started with front-end interfaces and back-end fundamentals, building dependable internal tools and learning how to ship practical software in real environments.",
-    tag: "HTML / CSS / JS / PHP",
+    year: "March 2020 - Dec 2022 / 2 yrs 10 mos",
+    title: "Full Stack Developer (Promoted from Junior to Mid-Level)",
+    desc: "Progressed from Junior to Mid-Level Developer while building accounting collection, sales monitoring, and SQL reporting systems with Vue.js and Laravel for internal business operations.",
+    tag: "Vue.js / Laravel / SQL / Accounting / Sales",
   },
   {
-    year: "2018 - 2020",
-    title: "Mid-Level Developer",
-    desc: "Expanded into Laravel and Vue.js, led feature delivery for larger applications, and introduced cleaner API patterns and stronger team workflows.",
-    tag: "Laravel / Vue.js / REST API / MySQL",
+    year: "Jan 2022 - Dec 2023 / 2 years",
+    title: "Full Stack Developer II - Promoted",
+    desc: "Developed Node.js APIs for ETL transactions, implemented Azure DevOps CI/CD pipelines, and handled ETL data presentation with Vue.js and Nuxt.",
+    tag: "Node.js / ETL / Vue.js / Nuxt / Azure DevOps",
   },
   {
-    year: "2020 - 2022",
-    title: "Full-Stack Developer",
-    desc: "Owned architecture, delivery, and deployment for business platforms, integrating cloud services and building scalable systems across multiple products.",
-    tag: "React / Node.js / Docker / AWS / Azure",
+    year: "Jan 2023 - May 2025 / 2 yrs 5 mos",
+    title: "Senior Full Stack Developer",
+    desc: "Developed secure Laravel and Symfony APIs, led React Bootstrap frontend UI work, and maintained CRM and eCommerce backend systems for daily business operations.",
+    tag: "Laravel / Symfony / React Bootstrap / CRM",
   },
   {
-    year: "2022 - Present",
-    title: "IT Specialist & AI Consultant",
-    desc: "Focused on AI-assisted workflows, CRM automation, prompt systems, and enterprise-grade tooling that reduces manual work and improves decision speed.",
-    tag: "AI / CRM / Automation / GoHighLevel / Power Platform",
+    year: "Present - CONTRACT",
+    title: "IT Specialist - Automation, AI & Vibe Coding",
+    desc: "Built a full-stack MES platform with React, Chakra UI, Redux Toolkit, Laravel APIs, dashboards, virtual screens, and AI-driven workflow automations for production operations.",
+    tag: "React / Chakra UI / Redux Toolkit / Laravel / MES",
   },
 ];
 
@@ -276,40 +276,27 @@ export const experienceContent = {
   title: "Professional",
   titleAccent: "Experience",
   description:
-    "A track record of building high-impact digital systems, from product delivery to automation and operational tooling.",
+    "Corporate experience across internal finance systems, ETL workflows, CRM platforms, and manufacturing automation.",
 };
 
-export const experiences = [
-  {
-    Icon: PsychologyAltRoundedIcon,
-    title: "AI Consultant & IT Specialist",
-    company: "Independent Practice",
-    desc: "Leading AI integration projects, CRM automation, and full-stack solution delivery for organizations looking to modernize operations.",
-    period: "2022 - Present",
-    current: true,
-  },
-  {
-    Icon: AccountTreeRoundedIcon,
-    title: "Full-Stack Developer",
-    company: "Technology Solutions Studio",
-    desc: "Architected SaaS platforms, APIs, and multi-tenant systems using Laravel, Vue.js, and cloud infrastructure.",
-    period: "2020 - 2022",
-  },
-  {
-    Icon: SettingsRoundedIcon,
-    title: "Mid-Level Web Developer",
-    company: "Digital Product Agency",
-    desc: "Delivered enterprise web applications and guided junior developers across CMS and commerce-focused builds.",
-    period: "2018 - 2020",
-  },
-  {
-    Icon: LightbulbRoundedIcon,
-    title: "Junior Web Developer",
-    company: "Startup Team",
-    desc: "Built responsive interfaces and back-end features using PHP, MySQL, and vanilla JavaScript in a fast-moving startup setting.",
-    period: "2016 - 2018",
-  },
-];
+const experienceIconMap = {
+  "CCL Design": PsychologyAltRoundedIcon,
+  "Scandinavian Good Business AB": AccountTreeRoundedIcon,
+  Inriver: SettingsRoundedIcon,
+  "Envireau Pacific Incorporated": LightbulbRoundedIcon,
+};
+
+export const experiences = siteData.experiences.map((experience) => ({
+  Icon: experienceIconMap[experience.company] || BusinessRoundedIcon,
+  title: experience.role,
+  company: experience.company,
+  desc: experience.summary,
+  highlights: experience.highlights,
+  logo: experience.logo,
+  period: experience.period,
+  tags: experience.tags,
+  current: experience.period.toLowerCase().includes("present"),
+}));
 
 export const contactContent = {
   label: "Get In Touch",

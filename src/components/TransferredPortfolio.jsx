@@ -20,10 +20,8 @@ import {
   projectsContent,
   skillCategoryLabels,
   skills,
-  storyContent,
   storyModalContent,
   techStackContent,
-  timelineItems,
 } from "@/features/portfolio/data/content";
 import AboutSection from "@/features/portfolio/components/AboutSection";
 import ContactSection from "@/features/portfolio/components/ContactSection";
@@ -34,7 +32,6 @@ import Lightbox from "@/features/portfolio/components/Lightbox";
 import PortfolioNav from "@/features/portfolio/components/PortfolioNav";
 import ProjectsSection from "@/features/portfolio/components/ProjectsSection";
 import StoryModal from "@/features/portfolio/components/StoryModal";
-import StorySection from "@/features/portfolio/components/StorySection";
 import TechStackSection from "@/features/portfolio/components/TechStackSection";
 import useBodyScrollLock from "@/features/portfolio/hooks/useBodyScrollLock";
 import useCursorFx from "@/features/portfolio/hooks/useCursorFx";
@@ -165,7 +162,11 @@ export default function TransferredPortfolio() {
 
       <div className={styles.divider} />
 
-      <StorySection content={storyContent} items={timelineItems} />
+      <ExperienceSection content={experienceContent} experiences={experiences} />
+
+      <div className={styles.divider} />
+
+      <ProjectsSection content={projectsContent} projects={projects} />
 
       <div className={styles.divider} />
 
@@ -179,10 +180,6 @@ export default function TransferredPortfolio() {
 
       <div className={styles.divider} />
 
-      <ProjectsSection content={projectsContent} projects={projects} />
-
-      <div className={styles.divider} />
-
       <GallerySection
         activeFilter={activeGalleryFilter}
         content={galleryContent}
@@ -192,10 +189,6 @@ export default function TransferredPortfolio() {
         onSelectItem={handleGallerySelect}
         onUpload={handleGalleryUpload}
       />
-
-      <div className={styles.divider} />
-
-      <ExperienceSection content={experienceContent} experiences={experiences} />
 
       <div className={styles.divider} />
 

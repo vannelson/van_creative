@@ -168,9 +168,9 @@
     {
       "company": "CCL Design",
       "role": "IT Specialist - Automation, AI & Vibe Coding",
-      "period": "Present - Contract",
-      "logo": "/company6.png",
-      "summary": "Built manufacturing and workflow systems that combine React, Chakra UI, Redux Toolkit, Laravel APIs, and AI-assisted automation to improve production visibility and operational speed.",
+      "period": "Present - CONTRACT",
+      "logo": "/company logo/CCL.png",
+      "summary": "Built a full-stack Manufacturing Execution System (MES) and production workflows using React, Chakra UI, Redux Toolkit, Laravel APIs, and AI-driven automations.",
       "highlights": [
         "Built a full-stack Manufacturing Execution System (MES) to manage work orders, WIP, BOMs, packing, route progress, and quality workflows in one platform.",
         "Developed responsive React + Chakra UI frontends with Redux Toolkit, integrated with secure Laravel APIs and role-based access for operators, supervisors, and admins.",
@@ -189,14 +189,14 @@
     {
       "company": "Scandinavian Good Business AB",
       "role": "Senior Full Stack Developer",
-      "period": "Jan 2023 - May 2025",
-      "logo": "/company3.jpg",
-      "summary": "Built secure business platforms and integrations across CRM, eCommerce, invoicing, and support workflows using Laravel, Symfony, and React Bootstrap.",
+      "period": "Jan 2023 - May 2025 / 2 yrs 5 mos",
+      "logo": "/company logo/Scandanivian.jpg",
+      "summary": "Developed scalable APIs, frontend UI, and CRM/eCommerce backend systems using Laravel, Symfony, and React Bootstrap while supporting client and business operations.",
       "highlights": [
-        "Developed scalable and secure RESTful APIs in Laravel and Symfony, integrating third-party services like Capeway and Zoho Invoices.",
+        "Developed scalable and secure RESTful APIs in Laravel and Symfony, integrating third-party services like Capway and Zoho Invoices.",
         "Led frontend UI design using React Bootstrap, optimizing user interactions to enhance experience and meet business needs.",
         "Handled client calls and concerns from CA clients, gathered feedback, resolved issues, and provided technical support to ensure client satisfaction.",
-        "Developed and maintained CRM and eCommerce backend systems for customer management, order processing, support workflows, and business operations."
+        "Developed and maintained CRM and eCommerce backend systems for customer management, order processing, support workflows, and business operations: https://backend.gracewellness.se/shop/backend/login."
       ],
       "tags": [
         "Laravel",
@@ -210,13 +210,13 @@
     {
       "company": "Inriver",
       "role": "Full Stack Developer II - Promoted",
-      "period": "Jan 2022 - Dec 2023",
-      "logo": "/company2.png",
-      "summary": "Delivered backend APIs, ETL transaction flows, deployment automation, and frontend ETL presentation across Node.js, Vue.js, and Nuxt.",
+      "period": "Jan 2022 - Dec 2023 / 2 years",
+      "logo": "/company logo/Inriver.png",
+      "summary": "Developed Node.js ETL APIs, Azure DevOps CI/CD pipelines, and Vue.js/Nuxt interfaces to streamline data processing, deployment, and frontend integration.",
       "highlights": [
         "Developed Node.js APIs, including ETL transactions, to streamline data processing and integration.",
         "Implemented CI/CD pipelines with Azure DevOps to improve deployment, automation, and workflow.",
-        "Previously handled ETL data processing and display using Vue.js and the Nuxt framework, ensuring seamless frontend integration."
+        "Responsible for processing and displaying ETL data using Vue.js and the Nuxt framework, ensuring seamless frontend integration."
       ],
       "tags": [
         "Node.js",
@@ -228,11 +228,11 @@
       ]
     },
     {
-      "company": "Envieau Pacific Incorporated",
+      "company": "Envireau Pacific Incorporated",
       "role": "Full Stack Developer (Promoted from Junior to Mid-Level)",
-      "period": "March 2020 - Dec 2022",
-      "logo": "/company1.png",
-      "summary": "Built internal finance and sales systems with Vue.js, Laravel, and SQL reporting while supporting accounting, sales, and cross-functional business operations.",
+      "period": "March 2020 - Dec 2022 / 2 yrs 10 mos",
+      "logo": "/company logo/Epi.png",
+      "summary": "Progressed from Junior to Mid-Level Developer while building accounting and sales systems with Vue.js, Laravel, and SQL reporting for internal business operations.",
       "highlights": [
         "Started as a Junior Developer and was later promoted to Mid-Level Developer based on performance, technical growth, and project contributions.",
         "Developed an Accounting Collection System using Vue.js and Laravel for tracking client accounts, managing payments, and monitoring payable aging in the accounting department.",

@@ -13,28 +13,49 @@ export default function ExperienceSection({ content, experiences }) {
           titleLead={content.title}
         />
 
-        <div className={styles.experienceGrid}>
+        <div className={styles.timeline}>
           {experiences.map((experience) => (
             <div
-              className={styles.experienceCard}
+              className={styles.timelineItem}
               data-reveal=""
-              key={experience.title}
+              key={`${experience.company}-${experience.title}`}
             >
-              <div className={styles.experienceLogo}>
-                <IconMark
-                  Icon={experience.Icon}
-                  className={styles.experienceIconSvg}
-                />
+              <div className={styles.timelineDot} />
+              <div className={styles.timelineYear}>{experience.period}</div>
+              <div className={styles.experienceTimelineHead}>
+                <div>
+                  <h3 className={styles.timelineTitle}>{experience.title}</h3>
+                  <div className={styles.experienceCompany}>{experience.company}</div>
+                </div>
+                <div className={styles.experienceTimelineIcon}>
+                  {experience.logo ? (
+                    <img
+                      alt={`${experience.company} logo`}
+                      className={styles.experienceLogoImage}
+                      src={experience.logo}
+                    />
+                  ) : (
+                    <IconMark
+                      Icon={experience.Icon}
+                      className={styles.experienceIconSvg}
+                    />
+                  )}
+                </div>
               </div>
-              <div className={styles.experienceInfo}>
-                <h3>{experience.title}</h3>
-                <div className={styles.experienceCompany}>{experience.company}</div>
-                <p>{experience.desc}</p>
-              </div>
-              <div className={styles.experiencePeriod}>
-                {experience.period}
+              <div className={styles.timelineDesc}>{experience.desc}</div>
+              <ul className={styles.experienceHighlights}>
+                {experience.highlights?.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
+                ))}
+              </ul>
+              <div className={styles.experienceTagRow}>
+                {experience.tags?.map((tag) => (
+                  <span className={styles.timelineTag} key={tag}>
+                    {tag}
+                  </span>
+                ))}
                 {experience.current ? (
-                  <div className={styles.currentPill}>Current</div>
+                  <span className={styles.currentPill}>Current</span>
                 ) : null}
               </div>
             </div>
