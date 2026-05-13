@@ -1,6 +1,7 @@
 import { Bebas_Neue, Geist, Geist_Mono, JetBrains_Mono, Rajdhani } from "next/font/google";
 import "./globals.css";
 import Providers from "@/app/providers";
+import siteData from "@/data/siteData.json";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,8 +31,14 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "AI-Powered Portfolio",
-  description: "Single-page portfolio experience transferred from a design reference into Next.js.",
+  title: `${siteData.profile.name} | ${siteData.profile.title}`,
+  description:
+    "Portfolio of Van Nelson Sim P Umbay, focused on full-stack development, IT systems, automation workflows, and AI-assisted productivity.",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }) {

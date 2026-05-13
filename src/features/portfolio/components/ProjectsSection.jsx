@@ -18,7 +18,7 @@ export default function ProjectsSection({ content, onOpenImage, projects }) {
               className={styles.projectCard}
               data-cursor="hover"
               data-reveal=""
-              key={project.title}
+              key={project.id}
             >
               <button
                 className={styles.projectImageButton}
@@ -64,7 +64,7 @@ export default function ProjectsSection({ content, onOpenImage, projects }) {
                 </div>
                 <div className={styles.projectTags}>
                   {project.tags.map((tag) => (
-                    <span className={styles.tag} key={tag}>
+                    <span className={styles.tag} key={`${project.id}-${tag}`}>
                       {tag}
                     </span>
                   ))}

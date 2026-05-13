@@ -2,7 +2,7 @@ import styles from "@/components/TransferredPortfolio.module.css";
 import IconMark from "./IconMark";
 import SectionHeader from "./SectionHeader";
 
-export default function ExperienceSection({ content, experiences }) {
+export default function ExperienceSection({ content, experiences, onOpenPreview }) {
   return (
     <section className={styles.experienceSection} id="experience">
       <div className={styles.sectionWrap}>
@@ -48,6 +48,25 @@ export default function ExperienceSection({ content, experiences }) {
                   <li key={highlight}>{highlight}</li>
                 ))}
               </ul>
+              {experience.previews?.length ? (
+                <div className={styles.experiencePreviewRow}>
+                  {experience.previews.map((image, index) => (
+                    <button
+                      aria-label={`Open ${experience.company} preview ${index + 1}`}
+                      className={styles.experiencePreviewButton}
+                      key={image}
+                      onClick={() => onOpenPreview(experience, index)}
+                      type="button"
+                    >
+                      <img
+                        alt={`${experience.company} preview ${index + 1}`}
+                        className={styles.experiencePreviewImage}
+                        src={image}
+                      />
+                    </button>
+                  ))}
+                </div>
+              ) : null}
               <div className={styles.experienceTagRow}>
                 {experience.tags?.map((tag) => (
                   <span className={styles.timelineTag} key={tag}>

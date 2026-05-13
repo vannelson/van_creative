@@ -139,19 +139,20 @@
 
 .navLogoText {
   font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
   color: #fff;
   line-height: 1.1;
+  max-width: 280px;
 }
 
 .navLogoText span {
   display: block;
-  font-size: 10px;
-  letter-spacing: 3px;
+  font-size: 8px;
+  letter-spacing: 1.2px;
   color: var(--gold);
   font-weight: 500;
+  margin-top: 2px;
 }
 
 .navLinks {
@@ -367,6 +368,54 @@
   background: rgba(255, 255, 255, 0.08);
   color: #fff;
   transform: translateY(-2px);
+}
+
+.heroSocials {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  animation: fadeUp 0.8s 0.52s ease both;
+}
+
+.heroSocialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 215, 0, 0.16);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.heroSocialLink:hover {
+  background: rgba(255, 215, 0, 0.08);
+  border-color: rgba(255, 215, 0, 0.32);
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.12);
+}
+
+.heroSocialIcon {
+  font-size: 20px !important;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.heroSocialLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.heroSocialValue {
+  font-size: 13px;
+  color: var(--text-dim);
 }
 
 .heroRight {
@@ -1278,6 +1327,41 @@
   display: block;
 }
 
+.experiencePreviewRow {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+  max-width: 420px;
+}
+
+.experiencePreviewButton {
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border: 1px solid rgba(255, 215, 0, 0.18);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 14px rgba(255, 215, 0, 0.06);
+}
+
+.experiencePreviewButton:hover {
+  border-color: rgba(255, 215, 0, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.12);
+}
+
+.experiencePreviewImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .experienceIconSvg {
   font-size: 28px !important;
   color: var(--gold);
@@ -1520,6 +1604,13 @@
   justify-content: center;
 }
 
+.contactQuickActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
 .buttonIcon {
   font-size: 20px !important;
 }
@@ -1527,6 +1618,32 @@
 .scheduleButton:hover {
   background: rgba(139, 92, 246, 0.2);
   box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+  transform: translateY(-2px);
+}
+
+.whatsAppButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.28);
+  border-radius: 8px;
+  color: #4ade80;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin-top: 8px;
+  justify-content: center;
+}
+
+.whatsAppButton:hover {
+  background: rgba(34, 197, 94, 0.14);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.18);
   transform: translateY(-2px);
 }
 
@@ -2040,6 +2157,15 @@
   .experiencePeriod {
     grid-column: 1 / -1;
     text-align: left;
+  }
+
+  .experienceTimelineHead {
+    flex-direction: column;
+  }
+
+  .experiencePreviewRow {
+    justify-content: flex-start;
+    max-width: none;
   }
 
   .formRow {

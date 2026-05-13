@@ -1,5 +1,6 @@
 import CalendarMonthRoundedIcon from "@mui/icons-material/CalendarMonthRounded";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import styles from "@/components/TransferredPortfolio.module.css";
 import IconMark from "./IconMark";
 import SectionHeader from "./SectionHeader";
@@ -9,6 +10,7 @@ export default function ContactSection({
   links,
   onSchedule,
   onSubmit,
+  onWhatsApp,
 }) {
   return (
     <section className={styles.contactSection} id="contact">
@@ -43,23 +45,39 @@ export default function ContactSection({
               ))}
             </div>
 
-            <button className={styles.scheduleButton} onClick={onSchedule} type="button">
-              <IconMark Icon={CalendarMonthRoundedIcon} className={styles.buttonIcon} />
-              {content.scheduleLabel}
-            </button>
+            <div className={styles.contactQuickActions}>
+              <button className={styles.scheduleButton} onClick={onSchedule} type="button">
+                <IconMark Icon={CalendarMonthRoundedIcon} className={styles.buttonIcon} />
+                {content.scheduleLabel}
+              </button>
+              <button className={styles.whatsAppButton} onClick={onWhatsApp} type="button">
+                <IconMark Icon={WhatsAppIcon} className={styles.buttonIcon} />
+                {content.whatsappLabel}
+              </button>
+            </div>
           </div>
 
           <form className={styles.contactForm} onSubmit={onSubmit}>
             <div className={styles.formRow}>
               <div className={styles.formGroup}>
                 <label htmlFor="contact-name">Your Name</label>
-                <input id="contact-name" placeholder="John Doe" type="text" />
+                <input
+                  autoComplete="name"
+                  id="contact-name"
+                  name="name"
+                  placeholder="John Doe"
+                  required
+                  type="text"
+                />
               </div>
               <div className={styles.formGroup}>
                 <label htmlFor="contact-email">Email Address</label>
                 <input
+                  autoComplete="email"
                   id="contact-email"
+                  name="email"
                   placeholder="john@example.com"
+                  required
                   type="email"
                 />
               </div>
@@ -67,7 +85,7 @@ export default function ContactSection({
 
             <div className={styles.formGroup}>
               <label htmlFor="contact-subject">Subject</label>
-              <select id="contact-subject" defaultValue="">
+              <select defaultValue="" id="contact-subject" name="subject" required>
                 <option value="">Select a topic...</option>
                 {content.formTopics.map((topic) => (
                   <option key={topic}>{topic}</option>
@@ -79,7 +97,9 @@ export default function ContactSection({
               <label htmlFor="contact-message">Message</label>
               <textarea
                 id="contact-message"
+                name="message"
                 placeholder="Tell me about your project..."
+                required
               />
             </div>
 

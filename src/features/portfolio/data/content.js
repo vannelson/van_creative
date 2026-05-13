@@ -15,7 +15,6 @@ import GroupsRoundedIcon from "@mui/icons-material/GroupsRounded";
 import HubRoundedIcon from "@mui/icons-material/HubRounded";
 import InsightsRoundedIcon from "@mui/icons-material/InsightsRounded";
 import Inventory2RoundedIcon from "@mui/icons-material/Inventory2Rounded";
-import LanguageRoundedIcon from "@mui/icons-material/LanguageRounded";
 import LaptopMacRoundedIcon from "@mui/icons-material/LaptopMacRounded";
 import LightbulbRoundedIcon from "@mui/icons-material/LightbulbRounded";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -35,10 +34,20 @@ import SyncRoundedIcon from "@mui/icons-material/SyncRounded";
 import TerminalRoundedIcon from "@mui/icons-material/TerminalRounded";
 import TrackChangesRoundedIcon from "@mui/icons-material/TrackChangesRounded";
 import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import WebRoundedIcon from "@mui/icons-material/WebRounded";
 import WidgetsRoundedIcon from "@mui/icons-material/WidgetsRounded";
 import WorkspacePremiumRoundedIcon from "@mui/icons-material/WorkspacePremiumRounded";
 import siteData from "@/data/siteData.json";
+
+const { profile } = siteData;
+const cleanUrl = (value) => value?.replace(/^https?:\/\//, "").replace(/\/$/, "") || "";
+
+export const navBrand = {
+  mark: profile.initials,
+  name: "Van Nelson Umbay",
+  role: "Full-Stack Developer / IT Specialist AI",
+};
 
 export const navItems = [
   { id: "home", label: "Home" },
@@ -46,7 +55,6 @@ export const navItems = [
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
   { id: "techstack", label: "Stack" },
-  { id: "gallery", label: "Gallery" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -75,6 +83,21 @@ export const heroStats = [
   { label: "Years Experience", count: 8 },
   { label: "Projects Delivered", count: 50 },
   { label: "Happy Clients", count: 30 },
+];
+
+export const heroSocialLinks = [
+  {
+    Icon: GitHubIcon,
+    label: "GitHub",
+    href: profile.social.github,
+    value: cleanUrl(profile.social.github),
+  },
+  {
+    Icon: LinkedInIcon,
+    label: "LinkedIn",
+    href: profile.social.linkedin,
+    value: cleanUrl(profile.social.linkedin),
+  },
 ];
 
 export const heroOrbitIcons = [
@@ -239,7 +262,7 @@ export const projects = siteData.projects.map((project) => ({
   images: project.images,
   objective: project.objective,
   preview: project.images[0],
-  tags: project.tags,
+  tags: [...new Set(project.tags)],
   title: project.title,
   url: project.url,
 }));
@@ -289,6 +312,22 @@ const experienceIconMap = {
   "Envireau Pacific Incorporated": LightbulbRoundedIcon,
 };
 
+const experiencePreviewMap = {
+  "CCL Design": [
+    "/company logo/CCL/1.jpg",
+    "/company logo/CCL/2.jpg",
+  ],
+  "Scandinavian Good Business AB": [
+    "/company logo/scan/1.jpg",
+    "/company logo/scan/2.jpg",
+  ],
+  Inriver: [
+    "/company logo/inriver/1.jpg",
+    "/company logo/inriver/2.jpg",
+    "/company logo/inriver/3.jpg",
+  ],
+};
+
 export const experiences = siteData.experiences.map((experience) => ({
   Icon: experienceIconMap[experience.company] || BusinessRoundedIcon,
   title: experience.role,
@@ -297,6 +336,7 @@ export const experiences = siteData.experiences.map((experience) => ({
   highlights: experience.highlights,
   logo: experience.logo,
   period: experience.period,
+  previews: experiencePreviewMap[experience.company] || [],
   tags: experience.tags,
   current: experience.period.toLowerCase().includes("present"),
 }));
@@ -306,8 +346,9 @@ export const contactContent = {
   title: "Let's",
   titleAccent: "Connect",
   description:
-    "Ready to build something sharp, modern, and useful? Start the conversation here.",
-  scheduleLabel: "Schedule a Meeting",
+    "Email, LinkedIn, or WhatsApp. Usually replies within 24 hours for project inquiries and collaboration.",
+  scheduleLabel: "Request a Meeting",
+  whatsappLabel: "Chat on WhatsApp",
   formTopics: [
     "Project Inquiry",
     "CRM Automation",
@@ -321,28 +362,33 @@ export const contactLinks = [
   {
     Icon: MailOutlineRoundedIcon,
     type: "Email",
-    value: "hello@signalstudio.dev",
-    href: "mailto:hello@signalstudio.dev",
+    value: profile.email,
+    href: `mailto:${profile.email}`,
   },
   {
     Icon: LinkedInIcon,
     type: "LinkedIn",
-    value: "linkedin.com/in/signalstudio",
-    href: "https://linkedin.com",
+    value: cleanUrl(profile.social.linkedin),
+    href: profile.social.linkedin,
   },
   {
     Icon: GitHubIcon,
     type: "GitHub",
-    value: "github.com/signalstudio",
-    href: "https://github.com",
+    value: cleanUrl(profile.social.github),
+    href: profile.social.github,
   },
   {
-    Icon: LanguageRoundedIcon,
-    type: "Portfolio",
-    value: "signalstudio.dev",
+    Icon: WhatsAppIcon,
+    type: "WhatsApp",
+    value: profile.whatsapp,
     href: "#",
   },
 ];
+
+export const contactTargets = {
+  email: profile.email,
+  whatsapp: profile.whatsapp,
+};
 
 export const footerContent = {
   lead: "Designed & Built with AI",

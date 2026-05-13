@@ -5,6 +5,7 @@ export default function HeroSection({
   content,
   orbitIcons,
   onOpenResume,
+  socialLinks,
   stats,
   statValues,
   statsRef,
@@ -34,6 +35,21 @@ export default function HeroSection({
           <button className={styles.btnGhost} onClick={onOpenResume} type="button">
             {content.resumeButtonLabel}
           </button>
+        </div>
+        <div className={styles.heroSocials}>
+          {socialLinks.map((link) => (
+            <a
+              className={styles.heroSocialLink}
+              href={link.href}
+              key={link.label}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <IconMark Icon={link.Icon} className={styles.heroSocialIcon} />
+              <span className={styles.heroSocialLabel}>{link.label}</span>
+              <span className={styles.heroSocialValue}>{link.value}</span>
+            </a>
+          ))}
         </div>
         <div className={styles.heroStats} ref={statsRef}>
           {stats.map((stat, index) => (

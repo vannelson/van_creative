@@ -2,6 +2,7 @@ import styles from "@/components/TransferredPortfolio.module.css";
 
 export default function PortfolioNav({
   activeSection,
+  brand,
   navItems,
   navScrolled,
   onOpenResume,
@@ -19,10 +20,10 @@ export default function PortfolioNav({
         className={`${styles.navbar} ${navScrolled ? styles.navbarScrolled : ""}`}
       >
         <a className={styles.navLogo} href="#home">
-          <div className={styles.navLogoMark}>AI</div>
+          <div className={styles.navLogoMark}>{brand.mark}</div>
           <div className={styles.navLogoText}>
-            Portfolio
-            <span>IT Specialist</span>
+            {brand.name}
+            <span>{brand.role}</span>
           </div>
         </a>
 

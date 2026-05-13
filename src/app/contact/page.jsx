@@ -7,14 +7,58 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import SubjectIcon from "@mui/icons-material/Title";
 import ChatIcon from "@mui/icons-material/ChatBubbleOutline";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import CallIcon from "@mui/icons-material/Call";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import MapIcon from "@mui/icons-material/Map";
+import CalendarMonthRoundedIcon from "@mui/icons-material/CalendarMonthRounded";
 import siteData from "@/data/siteData.json";
+import { buildMailtoUrl, buildWhatsAppUrl, sanitizeDigits } from "@/lib/contactLinks";
 
 export default function ContactPage() {
+  const whatsappDigits = sanitizeDigits(siteData.profile.whatsapp);
+  const whatsappIntl =
+    whatsappDigits.length === 11 && whatsappDigits.startsWith("0")
+      ? `63${whatsappDigits.slice(1)}`
+      : whatsappDigits;
+  const whatsAppHref = buildWhatsAppUrl(
+    whatsappIntl,
+    "Hi Van, I would like to discuss a project with you."
+  );
+  const meetingHref = buildMailtoUrl(siteData.profile.email, {
+    subject: "Meeting Request",
+    body: [
+      "Hi Van,",
+      "",
+      "I would like to schedule a meeting with you.",
+      "",
+      "Preferred date/time:",
+      "Timezone:",
+      "Project details:",
+    ].join("\n"),
+  });
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = String(formData.get("name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const phone = String(formData.get("phone") || "").trim();
+    const subject = String(formData.get("subject") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+
+    window.location.href = buildMailtoUrl(siteData.profile.email, {
+      subject: `${subject} / ${name || "Portfolio Inquiry"}`,
+      body: [
+        "Hi Van,",
+        "",
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Phone: ${phone || "Not provided"}`,
+        `Subject: ${subject}`,
+        "",
+        "Message:",
+        message,
+      ].join("\n"),
+    });
   };
 
   return (
@@ -38,32 +82,32 @@ export default function ContactPage() {
                   {/* First Row - Name and Email */}
                   <Grid container spacing={2}>
                     <Grid item xs={12} md={6}>
-                      <TextField label="Your name *" fullWidth required variant="outlined" InputProps={{ startAdornment: (<InputAdornment position="start"><PersonIcon /></InputAdornment>) }} sx={{ "& .MuiOutlinedInput-root": { backgroundColor: "background.paper" } }} />
+                      <TextField name="name" label="Your name *" fullWidth required variant="outlined" InputProps={{ startAdornment: (<InputAdornment position="start"><PersonIcon /></InputAdornment>) }} sx={{ "& .MuiOutlinedInput-root": { backgroundColor: "background.paper" } }} />
                     </Grid>
                     <Grid item xs={12} md={6}>
-                      <TextField type="email" label="Email address *" fullWidth required variant="outlined" InputProps={{ startAdornment: (<InputAdornment position="start"><EmailIcon /></InputAdornment>) }} sx={{ "& .MuiOutlinedInput-root": { backgroundColor: "background.paper" } }} />
+                      <TextField name="email" type="email" label="Email address *" fullWidth required variant="outlined" InputProps={{ startAdornment: (<InputAdornment position="start"><EmailIcon /></InputAdornment>) }} sx={{ "& .MuiOutlinedInput-root": { backgroundColor: "background.paper" } }} />
                     </Grid>
                   </Grid>
 
                   {/* Second Row - Phone and Subject */}
                   <Grid container spacing={2}>
                     <Grid item xs={12} md={6}>
-                      <TextField type="tel" label="Phone (optional)" fullWidth variant="outlined" InputProps={{ startAdornment: (<InputAdornment position="start"><PhoneIcon /></InputAdornment>) }} sx={{ "& .MuiOutlinedInput-root": { backgroundColor: "background.paper" } }} />
+                      <TextField name="phone" type="tel" label="Phone (optional)" fullWidth variant="outlined" InputProps={{ startAdornment: (<InputAdornment position="start"><PhoneIcon /></InputAdornment>) }} sx={{ "& .MuiOutlinedInput-root": { backgroundColor: "background.paper" } }} />
                     </Grid>
                     <Grid item xs={12} md={6}>
-                      <TextField label="Subject *" fullWidth required variant="outlined" InputProps={{ startAdornment: (<InputAdornment position="start"><SubjectIcon /></InputAdornment>) }} sx={{ "& .MuiOutlinedInput-root": { backgroundColor: "background.paper" } }} />
+                      <TextField name="subject" label="Subject *" fullWidth required variant="outlined" InputProps={{ startAdornment: (<InputAdornment position="start"><SubjectIcon /></InputAdornment>) }} sx={{ "& .MuiOutlinedInput-root": { backgroundColor: "background.paper" } }} />
                     </Grid>
                   </Grid>
 
                   {/* Message Field */}
-                  <TextField label="Your message *" fullWidth required multiline minRows={6} variant="outlined" InputProps={{ startAdornment: (<InputAdornment position="start"><ChatIcon /></InputAdornment>) }} sx={{ "& .MuiOutlinedInput-root": { backgroundColor: "background.paper" } }} />
+                  <TextField name="message" label="Your message *" fullWidth required multiline minRows={6} variant="outlined" InputProps={{ startAdornment: (<InputAdornment position="start"><ChatIcon /></InputAdornment>) }} sx={{ "& .MuiOutlinedInput-root": { backgroundColor: "background.paper" } }} />
 
                   {/* Buttons */}
                   <Stack direction="row" spacing={2} justifyContent="space-between" alignItems="center" sx={{ mt: 1 }}>
-                    <Stack direction="row" spacing={1}>
-                      <Chip icon={<WhatsAppIcon />} label="WhatsApp" variant="outlined" color="primary" sx={{ borderRadius: 999, px: 1 }} />
-                      <Chip icon={<CallIcon />} label="Viber" variant="outlined" color="primary" sx={{ borderRadius: 999, px: 1 }} />
-                    </Stack>
+                  <Stack direction="row" spacing={1}>
+                      <Chip component="a" clickable href={whatsAppHref} icon={<WhatsAppIcon />} label="WhatsApp" rel="noreferrer" target="_blank" variant="outlined" color="primary" sx={{ borderRadius: 999, px: 1 }} />
+                      <Chip component="a" clickable href={meetingHref} icon={<CalendarMonthRoundedIcon />} label="Request Meeting" variant="outlined" color="primary" sx={{ borderRadius: 999, px: 1 }} />
+                  </Stack>
                     <Button type="submit" variant="contained" color="primary" size="large" sx={{ px: 4, py: 1, fontSize: "1rem" }}>Send Message</Button>
                   </Stack>
                 </Stack>

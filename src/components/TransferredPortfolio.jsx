@@ -1,21 +1,21 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import {
   aboutCards,
   aboutContent,
   contactContent,
   contactLinks,
-  defaultGallery,
+  contactTargets,
   experienceContent,
   experiences,
   footerContent,
-  galleryContent,
-  galleryFilters,
   heroContent,
   heroOrbitIcons,
+  heroSocialLinks,
   heroStats,
   navItems,
+  navBrand,
   projects,
   projectsContent,
   resumePreviewContent,
@@ -27,7 +27,6 @@ import {
 import AboutSection from "@/features/portfolio/components/AboutSection";
 import ContactSection from "@/features/portfolio/components/ContactSection";
 import ExperienceSection from "@/features/portfolio/components/ExperienceSection";
-import GallerySection from "@/features/portfolio/components/GallerySection";
 import HeroSection from "@/features/portfolio/components/HeroSection";
 import Lightbox from "@/features/portfolio/components/Lightbox";
 import PortfolioNav from "@/features/portfolio/components/PortfolioNav";
@@ -42,6 +41,7 @@ import useRevealOnScroll from "@/features/portfolio/hooks/useRevealOnScroll";
 import useScrollSpy from "@/features/portfolio/hooks/useScrollSpy";
 import useStatsCounter from "@/features/portfolio/hooks/useStatsCounter";
 import useToast from "@/features/portfolio/hooks/useToast";
+import { buildMailtoUrl, buildWhatsAppUrl, sanitizeDigits } from "@/lib/contactLinks";
 import styles from "./TransferredPortfolio.module.css";
 
 export default function TransferredPortfolio() {
@@ -51,66 +51,30 @@ export default function TransferredPortfolio() {
   const ringRef = useRef(null);
 
   const [activeSkillCat, setActiveSkillCat] = useState("frontend");
-  const [activeGalleryFilter, setActiveGalleryFilter] = useState("all");
-  const [uploadedImages, setUploadedImages] = useState([]);
   const [lightbox, setLightbox] = useState(null);
   const [storyModalOpen, setStoryModalOpen] = useState(false);
   const [resumeModalOpen, setResumeModalOpen] = useState(false);
 
-  const filteredGallery = useMemo(() => {
-    const items = [
-      ...defaultGallery,
-      ...uploadedImages.map((src) => ({
-        src,
-        label: "Upload",
-        filter: "workspace",
-        tall: false,
-      })),
-    ];
-
-    if (activeGalleryFilter === "all") {
-      return items;
-    }
-
-    return items.filter((item) => item.filter === activeGalleryFilter);
-  }, [activeGalleryFilter, uploadedImages]);
-
   const { activeSection, navScrolled, scrollProgress } = useScrollSpy(navItems);
   const { statValues, statsRef } = useStatsCounter(heroStats);
   const { toastMessage, showToast } = useToast();
+  const whatsappDigits = sanitizeDigits(contactTargets.whatsapp);
+  const whatsappIntl =
+    whatsappDigits.length === 11 && whatsappDigits.startsWith("0")
+      ? `63${whatsappDigits.slice(1)}`
+      : whatsappDigits;
+  const whatsAppHref = buildWhatsAppUrl(
+    whatsappIntl,
+    "Hi Van, I would like to discuss a project with you."
+  );
+  const resolvedContactLinks = contactLinks.map((link) =>
+    link.type === "WhatsApp" ? { ...link, href: whatsAppHref } : link
+  );
 
   useBodyScrollLock(Boolean(lightbox || storyModalOpen || resumeModalOpen));
-  useRevealOnScroll(pageRef, `${activeSkillCat}:${filteredGallery.length}`);
+  useRevealOnScroll(pageRef, activeSkillCat);
   useParticleCanvas(canvasRef);
   useCursorFx(pageRef, cursorRef, ringRef);
-
-  const handleGalleryUpload = (event) => {
-    const files = Array.from(event.target.files || []);
-
-    files.forEach((file) => {
-      const reader = new FileReader();
-      reader.onload = (loadEvent) => {
-        const imageData = loadEvent.target?.result;
-        if (typeof imageData === "string") {
-          setUploadedImages((previous) => [...previous, imageData]);
-        }
-      };
-      reader.readAsDataURL(file);
-    });
-
-    event.target.value = "";
-  };
-
-  const handleGallerySelect = (item) => {
-    setLightbox({
-      content: item.src,
-      Icon: item.Icon,
-      images: item.src ? [item.src] : [],
-      currentIndex: 0,
-      isImage: Boolean(item.src),
-      label: item.label,
-    });
-  };
 
   const handleProjectPreview = (project) => {
     setLightbox({
@@ -119,6 +83,20 @@ export default function TransferredPortfolio() {
       currentIndex: 0,
       isImage: true,
       label: project.title,
+    });
+  };
+
+  const handleExperiencePreview = (experience, index) => {
+    if (!experience.previews?.length) {
+      return;
+    }
+
+    setLightbox({
+      content: experience.previews[index],
+      images: experience.previews,
+      currentIndex: index,
+      isImage: true,
+      label: experience.company,
     });
   };
 
@@ -143,7 +121,51 @@ export default function TransferredPortfolio() {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    showToast("Message sent successfully!");
+    const formData = new FormData(event.currentTarget);
+    const name = String(formData.get("name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const subject = String(formData.get("subject") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+    const mailto = buildMailtoUrl(contactTargets.email, {
+      subject: `${subject} / ${name || "Portfolio Inquiry"}`,
+      body: [
+        "Hi Van,",
+        "",
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Subject: ${subject}`,
+        "",
+        "Message:",
+        message,
+      ].join("\n"),
+    });
+
+    showToast("Opening your email client...");
+    event.currentTarget.reset();
+    window.location.href = mailto;
+  };
+
+  const handleRequestMeeting = () => {
+    const meetingMailto = buildMailtoUrl(contactTargets.email, {
+      subject: "Meeting Request",
+      body: [
+        "Hi Van,",
+        "",
+        "I would like to schedule a meeting with you.",
+        "",
+        "Preferred date/time:",
+        "Timezone:",
+        "Project details:",
+      ].join("\n"),
+    });
+
+    showToast("Opening your email client...");
+    window.location.href = meetingMailto;
+  };
+
+  const handleWhatsApp = () => {
+    showToast("Opening WhatsApp...");
+    window.open(whatsAppHref, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -182,6 +204,7 @@ export default function TransferredPortfolio() {
 
       <PortfolioNav
         activeSection={activeSection}
+        brand={navBrand}
         navItems={navItems}
         navScrolled={navScrolled}
         onOpenResume={() => setResumeModalOpen(true)}
@@ -193,6 +216,7 @@ export default function TransferredPortfolio() {
         content={heroContent}
         onOpenResume={() => setResumeModalOpen(true)}
         orbitIcons={heroOrbitIcons}
+        socialLinks={heroSocialLinks}
         stats={heroStats}
         statValues={statValues}
         statsRef={statsRef}
@@ -208,7 +232,11 @@ export default function TransferredPortfolio() {
 
       <div className={styles.divider} />
 
-      <ExperienceSection content={experienceContent} experiences={experiences} />
+      <ExperienceSection
+        content={experienceContent}
+        experiences={experiences}
+        onOpenPreview={handleExperiencePreview}
+      />
 
       <div className={styles.divider} />
 
@@ -230,23 +258,12 @@ export default function TransferredPortfolio() {
 
       <div className={styles.divider} />
 
-      <GallerySection
-        activeFilter={activeGalleryFilter}
-        content={galleryContent}
-        filters={galleryFilters}
-        items={filteredGallery}
-        onFilterChange={setActiveGalleryFilter}
-        onSelectItem={handleGallerySelect}
-        onUpload={handleGalleryUpload}
-      />
-
-      <div className={styles.divider} />
-
       <ContactSection
         content={contactContent}
-        links={contactLinks}
-        onSchedule={() => showToast("Scheduling link coming soon")}
+        links={resolvedContactLinks}
+        onSchedule={handleRequestMeeting}
         onSubmit={handleFormSubmit}
+        onWhatsApp={handleWhatsApp}
       />
 
       <footer className={styles.footer}>
