@@ -1,7 +1,6 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bebas_Neue, Geist, Geist_Mono, JetBrains_Mono, Rajdhani } from "next/font/google";
 import "./globals.css";
 import Providers from "@/app/providers";
-import SiteShell from "@/components/SiteShell";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,20 +12,35 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas-neue",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const rajdhani = Rajdhani({
+  variable: "--font-rajdhani",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+});
+
 export const metadata = {
-  title: "Van Creative — Portfolio",
-  description: "Developer portfolio built with Next.js, Tailwind, and MUI.",
+  title: "AI-Powered Portfolio",
+  description: "Single-page portfolio experience transferred from a design reference into Next.js.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${rajdhani.variable} ${jetbrainsMono.variable} antialiased`}
       >
-        <Providers>
-          <SiteShell>{children}</SiteShell>
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

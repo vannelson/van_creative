@@ -7,9 +7,9 @@ import SkillItem from "@/components/SkillItem";
 
 export default function SkillsPage() {
   const { frontend = [], backend = [], databaseCloud = [], automationTesting = [], automation = [] } = siteData.skills || {};
+
   return (
     <Stack spacing={2}>
-      {/* Intro card */}
       <Card sx={{ position: "relative", overflow: "hidden", border: "1px solid", borderColor: "divider", backgroundImage: "none" }}>
         <Box sx={{ position: "absolute", inset: 0, pointerEvents: "none", background: "radial-gradient(700px 260px at 20% -10%, rgba(34,197,94,0.10), transparent 60%)" }} />
         <CardContent sx={{ position: "relative" }}>
@@ -19,8 +19,12 @@ export default function SkillsPage() {
                 <StarsIcon />
               </Box>
               <Box>
-                <Typography variant="h4" fontWeight={900} sx={{ mb: 0 }}>Skills</Typography>
-                <Typography color="text.secondary">A simple overview of my current stack with a 10‑star scale.</Typography>
+                <Typography variant="h4" fontWeight={900} sx={{ mb: 0 }}>
+                  Skills
+                </Typography>
+                <Typography color="text.secondary">
+                  A simple overview of my current stack with a 10-star scale.
+                </Typography>
               </Box>
             </Stack>
             <Stack direction={{ xs: "column", sm: "row" }} spacing={1} alignItems={{ xs: "flex-start", sm: "center" }}>
@@ -39,21 +43,33 @@ export default function SkillsPage() {
 
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
-          <Card sx={{ border: '1px solid', borderColor: 'divider', backgroundImage: 'none' }}>
+          <Card sx={{ border: "1px solid", borderColor: "divider", backgroundImage: "none" }}>
             <CardContent>
-              <Typography variant="h6" fontWeight={800} gutterBottom>Frontend</Typography>
+              <Typography variant="h6" fontWeight={800} gutterBottom>
+                Frontend
+              </Typography>
               <Grid container spacing={1.25}>
-                {frontend.map((s) => (<Grid item xs={12} key={s.name}><SkillItem name={s.name} score={s.score} /></Grid>))}
+                {frontend.map((s) => (
+                  <Grid item xs={12} key={s.name}>
+                    <SkillItem name={s.name} score={s.score} />
+                  </Grid>
+                ))}
               </Grid>
             </CardContent>
           </Card>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Card sx={{ border: '1px solid', borderColor: 'divider', backgroundImage: 'none' }}>
+          <Card sx={{ border: "1px solid", borderColor: "divider", backgroundImage: "none" }}>
             <CardContent>
-              <Typography variant="h6" fontWeight={800} gutterBottom>Backend</Typography>
+              <Typography variant="h6" fontWeight={800} gutterBottom>
+                Backend
+              </Typography>
               <Grid container spacing={1.25}>
-                {backend.map((s) => (<Grid item xs={12} key={s.name}><SkillItem name={s.name} score={s.score} /></Grid>))}
+                {backend.map((s) => (
+                  <Grid item xs={12} key={s.name}>
+                    <SkillItem name={s.name} score={s.score} />
+                  </Grid>
+                ))}
               </Grid>
             </CardContent>
           </Card>
@@ -62,36 +78,53 @@ export default function SkillsPage() {
 
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
-          <Card sx={{ border: '1px solid', borderColor: 'divider', backgroundImage: 'none' }}>
+          <Card sx={{ border: "1px solid", borderColor: "divider", backgroundImage: "none" }}>
             <CardContent>
-              <Typography variant="h6" fontWeight={800} gutterBottom>Database · Cloud · DevOps</Typography>
+              <Typography variant="h6" fontWeight={800} gutterBottom>
+                Database - Cloud - DevOps
+              </Typography>
               <Grid container spacing={1.25}>
-                {databaseCloud.map((s) => (<Grid item xs={12} key={s.name}><SkillItem name={s.name} score={s.score} /></Grid>))}
+                {databaseCloud.map((s) => (
+                  <Grid item xs={12} key={s.name}>
+                    <SkillItem name={s.name} score={s.score} />
+                  </Grid>
+                ))}
               </Grid>
             </CardContent>
           </Card>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Card sx={{ border: '1px solid', borderColor: 'divider', backgroundImage: 'none' }}>
+          <Card sx={{ border: "1px solid", borderColor: "divider", backgroundImage: "none" }}>
             <CardContent>
-              <Typography variant="h6" fontWeight={800} gutterBottom>Automation & Testing</Typography>
+              <Typography variant="h6" fontWeight={800} gutterBottom>
+                Automation & Testing
+              </Typography>
               <Grid container spacing={1.25}>
-                {automationTesting.map((s) => (<Grid item xs={12} key={s.name}><SkillItem name={s.name} score={s.score} /></Grid>))}
+                {automationTesting.map((s) => (
+                  <Grid item xs={12} key={s.name}>
+                    <SkillItem name={s.name} score={s.score} />
+                  </Grid>
+                ))}
               </Grid>
             </CardContent>
           </Card>
         </Grid>
       </Grid>
 
-      <Card sx={{ border: '1px solid', borderColor: 'divider', backgroundImage: 'none' }}>
+      <Card sx={{ border: "1px solid", borderColor: "divider", backgroundImage: "none" }}>
         <CardContent>
-          <Typography variant="h6" fontWeight={800} gutterBottom>Automation</Typography>
+          <Typography variant="h6" fontWeight={800} gutterBottom>
+            Automation
+          </Typography>
           <Grid container spacing={1.25}>
-            {automation.map((s) => (<Grid item xs={12} md={6} key={s.name}><SkillItem name={s.name} score={s.score} /></Grid>))}
+            {automation.map((s) => (
+              <Grid item xs={12} md={6} key={s.name}>
+                <SkillItem name={s.name} score={s.score} />
+              </Grid>
+            ))}
           </Grid>
         </CardContent>
       </Card>
     </Stack>
   );
 }
-

@@ -16,7 +16,7 @@ const theme = createTheme({
       secondary: "#b5b8bd",
     },
     primary: {
-      main: "#22c55e", // emerald 500
+      main: "#22c55e",
       dark: "#16a34a",
       light: "#34d399",
       contrastText: "#06140a",

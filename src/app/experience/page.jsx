@@ -34,7 +34,7 @@ export default function ExperiencePage() {
             <Box sx={{ position: "absolute", left: 13, top: 0, bottom: 0, width: 3, bgcolor: "transparent", background: "linear-gradient(to bottom, rgba(34,197,94,0.3), rgba(34,197,94,0))" }} />
             <Stack spacing={3}>
               {experiences.map((e, i) => (
-                <Box key={e.company} sx={{ display: "grid", gridTemplateColumns: "26px 1fr", columnGap: 2 }}>
+                <Box key={`${e.company}-${e.role}-${i}`} sx={{ display: "grid", gridTemplateColumns: "26px 1fr", columnGap: 2 }}>
                   <Box sx={{ position: "relative" }}>
                     <Box
                       sx={{

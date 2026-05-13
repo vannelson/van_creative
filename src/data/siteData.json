@@ -4,12 +4,12 @@
     "title": "Full-Stack Developer",
     "avatar": "/profile.jpg",
     "initials": "VC",
-    "location": "Remote — Worldwide",
+    "location": "Remote - Worldwide",
     "email": "vannelsonsim_umbay@outlook.com",
     "phone": "0993 854 5594",
     "whatsapp": "0993 854 5594",
     "viber": "0916 982 5856",
-    "availability": "Mon–Fri, 8am–6pm (UTC-5)",
+    "availability": "Mon-Fri, 8am-6pm (UTC-5)",
     "social": {
       "github": "https://github.com/vannelson",
       "linkedin": "https://www.linkedin.com/in/van-nelson-sim-umbay-6793b5241/",
@@ -49,7 +49,6 @@
       "desc": "Workflow + business automation",
       "tags": ["Excel", "Power Apps", "Power Automate", "SharePoint"]
     },
-
     {
       "icon": "BugReport",
       "title": "GHL",
@@ -113,7 +112,6 @@
       "url": "https://backend.gracewellness.se/shop/backend/dashboard",
       "tags": ["Express.js", "react", "Tailwind"]
     },
-
     {
       "id": "EPI Phil - Collections",
       "title": "Collection Reports / PDC Monitoring",
@@ -145,7 +143,7 @@
     {
       "id": "skillwise StartUp",
       "title": "Start Up Skillwise Marketing Landing Page",
-      "desc": "An interactive landing page designed to showcase Skillwise’s startup services with a modern, responsive design focused on user engagement and lead generation.",
+      "desc": "An interactive landing page designed to showcase Skillwise's startup services with a modern, responsive design focused on user engagement and lead generation.",
       "objective": "Create a high-converting, responsive landing page that highlights services and drives customer engagement.",
       "images": [
         "/pro_skillwise/1.png",
@@ -168,97 +166,87 @@
   ],
   "experiences": [
     {
-      "company": "Thrive Comprehensive Medical Group",
-      "role": "IT Application Developer (Automation)",
-      "period": "2026",
+      "company": "CCL Design",
+      "role": "IT Specialist - Automation, AI & Vibe Coding",
+      "period": "Present - Contract",
       "logo": "/company6.png",
-      "summary": "Build Microsoft 365 automation solutions across the ecosystem using Power Automate, Power Apps, SharePoint, and Excel to streamline workflows and improve data handling.",
+      "summary": "Built manufacturing and workflow systems that combine React, Chakra UI, Redux Toolkit, Laravel APIs, and AI-assisted automation to improve production visibility and operational speed.",
       "highlights": [
-        "Developed end-to-end automation flows in Power Automate across Microsoft 365 to connect processes and reduce manual work.",
-        "Built Power Apps to enhance Excel-based workflows and improve data accuracy and usability.",
-        "Managed large SharePoint datasets for structured data handling and reporting.",
-        "Led client communication, gathered requirements, translated them into working solutions, and handled change requests.",
-        "Provided support calls and technical troubleshooting to keep systems stable and users productive."
+        "Built a full-stack Manufacturing Execution System (MES) to manage work orders, WIP, BOMs, packing, route progress, and quality workflows in one platform.",
+        "Developed responsive React + Chakra UI frontends with Redux Toolkit, integrated with secure Laravel APIs and role-based access for operators, supervisors, and admins.",
+        "Delivered real-time dashboards, notifications, virtual screens, and PDF work packet records to improve production visibility, traceability, and faster decision-making.",
+        "Implemented AI-driven features such as MES prompt assistance and workflow automations, helping modernize operations and reduce manual processes."
       ],
       "tags": [
-        "Microsoft 365",
-        "Power Automate",
-        "Power Apps",
-        "SharePoint",
-        "Excel",
-        "Client Communication",
-        "Troubleshooting"
+        "React",
+        "Chakra UI",
+        "Redux Toolkit",
+        "Laravel",
+        "AI Automation",
+        "MES"
       ]
     },
     {
       "company": "Scandinavian Good Business AB",
-      "role": "Full-Stack Developer",
-      "period": "2024 – 2025",
+      "role": "Senior Full Stack Developer",
+      "period": "Jan 2023 - May 2025",
       "logo": "/company3.jpg",
-      "summary": "Architected and built scalable systems, secure RESTful APIs, and integrations (Laravel, Symfony) connecting Capeway and Zoho Invoices.",
+      "summary": "Built secure business platforms and integrations across CRM, eCommerce, invoicing, and support workflows using Laravel, Symfony, and React Bootstrap.",
       "highlights": [
-        "Designed the overall architecture of the system, covering planning, development, testing, and deployment phases.",
-        "Developed secure and scalable RESTful APIs with Laravel and Symfony, integrating third-party services such as Capeway and Zoho Invoices.",
-        "Customized WordPress templates and developed custom functions to enhance website functionality, performance, and user experience.",
-        "Designed interactive, real-time canvases with ES6 + GoJS for dynamic data visualization.",
-        "Led front-end architecture, optimizing user interactions and improving UX across core business flows."
+        "Developed scalable and secure RESTful APIs in Laravel and Symfony, integrating third-party services like Capeway and Zoho Invoices.",
+        "Led frontend UI design using React Bootstrap, optimizing user interactions to enhance experience and meet business needs.",
+        "Handled client calls and concerns from CA clients, gathered feedback, resolved issues, and provided technical support to ensure client satisfaction.",
+        "Developed and maintained CRM and eCommerce backend systems for customer management, order processing, support workflows, and business operations."
       ],
       "tags": [
-        "System Architecture",
         "Laravel",
         "Symfony",
         "REST API",
-        "JavaScript ES6",
-        "GoJS"
+        "React Bootstrap",
+        "CRM",
+        "eCommerce"
       ]
     },
     {
-      "company": "Inriver - Incorporated",
-      "role": "Full-Stack Developer",
-      "period": "12/2019 – 01/2024",
+      "company": "Inriver",
+      "role": "Full Stack Developer II - Promoted",
+      "period": "Jan 2022 - Dec 2023",
       "logo": "/company2.png",
-      "summary": "Delivered APIs, ETL pipelines, and enterprise-grade integrations using Node.js, Express, React, and Vue/Nuxt for multi-platform data presentation.",
+      "summary": "Delivered backend APIs, ETL transaction flows, deployment automation, and frontend ETL presentation across Node.js, Vue.js, and Nuxt.",
       "highlights": [
-        "Developed RESTful APIs with Node.js + Express to support data exchange and integrations.",
-        "Built ETL APIs to handle Extract-Transform-Load (ETL) processes, streamlining data ingestion and transformation.",
-        "Created dynamic front-end components with React and Vue.js/Nuxt to present data consistently across different platforms.",
-        "Developed processing and display pipelines that ensured seamless visualization of enterprise data.",
-        "Implemented CI/CD pipelines using Azure DevOps for automated builds, testing, and deployments.",
-        "Optimized API performance with middleware, validation, and error-handling patterns for enterprise reliability."
+        "Developed Node.js APIs, including ETL transactions, to streamline data processing and integration.",
+        "Implemented CI/CD pipelines with Azure DevOps to improve deployment, automation, and workflow.",
+        "Previously handled ETL data processing and display using Vue.js and the Nuxt framework, ensuring seamless frontend integration."
       ],
       "tags": [
         "Node.js",
-        "Express",
-        "REST API",
-        "React",
+        "ETL",
         "Vue.js",
         "Nuxt",
         "Azure DevOps",
         "CI/CD"
       ]
     },
-
     {
-      "company": "Envireau Pacific Incorporated",
-      "role": "Full-Stack Developer",
-      "period": "01/2020 – 12/2022",
+      "company": "Envieau Pacific Incorporated",
+      "role": "Full Stack Developer (Promoted from Junior to Mid-Level)",
+      "period": "March 2020 - Dec 2022",
       "logo": "/company1.png",
-      "summary": "Architected and developed financial systems and dashboards (Vue + Laravel), building RESTful APIs and collaborating with Finance/CPA teams for accurate reporting and reconciliation.",
+      "summary": "Built internal finance and sales systems with Vue.js, Laravel, and SQL reporting while supporting accounting, sales, and cross-functional business operations.",
       "highlights": [
-        "Designed the system architecture from scratch, including planning, development, testing, and deployment.",
-        "Built RESTful APIs in Laravel to support accounting workflows, payment tracking, and reporting modules.",
-        "Developed an Accounting Collection System (Vue + Laravel) to manage accounts, payments, and aging balances.",
-        "Created a Sales Dashboard to track product movement, generate monthly reports, and align sales targets with finance KPIs.",
-        "Collaborated closely with the Finance and CPA team to ensure accurate reports, data integrity, and balance reconciliation."
+        "Started as a Junior Developer and was later promoted to Mid-Level Developer based on performance, technical growth, and project contributions.",
+        "Developed an Accounting Collection System using Vue.js and Laravel for tracking client accounts, managing payments, and monitoring payable aging in the accounting department.",
+        "Built a Sales Dashboard Monitoring System to track product movement, generate monthly sales reports, and support sales target analysis.",
+        "Created and optimized SQL database queries for reporting, analytics, and business data extraction.",
+        "Investigated and troubleshot system issues, data inconsistencies, and application bugs, and worked closely with accounting, sales, and other departments to gather requirements."
       ],
       "tags": [
-        "System Architecture",
         "Vue.js",
         "Laravel",
-        "REST API",
+        "SQL",
         "Accounting Systems",
-        "Dashboards",
-        "Finance Collaboration"
+        "Sales Dashboard",
+        "Reporting"
       ]
     }
   ],

@@ -1,0 +1,23 @@
+
+> vancreative@0.1.0 predev
+> npm run clean
+
+
+> vancreative@0.1.0 clean
+> node -e "require('fs').rmSync('.next', { recursive: true, force: true })"
+
+
+> vancreative@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.5.9
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.11:3000
+
+ ✓ Starting...
+ ✓ Ready in 2.9s
+ ○ Compiling / ...
+ ✓ Compiled / in 1182ms (100 modules)
+ ✓ Compiled in 6.2s (536 modules)
+ GET /favicon.ico 200 in 9980ms
+ GET / 200 in 10836ms

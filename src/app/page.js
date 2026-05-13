@@ -1,6 +1,5 @@
-import AboutPage from "./about/page";
+import TransferredPortfolio from "@/components/TransferredPortfolio";
 
 export default function Home() {
-  return <AboutPage />;
+  return <TransferredPortfolio />;
 }
-
